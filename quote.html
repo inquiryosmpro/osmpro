@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Get a Free Quote – OSM Pro</title>
+<meta name="description" content="Request a free quote from OSM Pro – Guelph's one-stop property maintenance company. Lawn care, pressure washing, window cleaning, gutter cleaning, snow removal and more.">
+<meta name="robots" content="noindex">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --green: #2D6A2D;
+    --green-light: #4A9E4A;
+    --green-bright: #6fd86f;
+    --gold: #C8922A;
+    --gold-light: #F5C96A;
+    --dark: #0e1410;
+    --white: #FFFFFF;
+    --offwhite: #F7F9F5;
+    --gray: #6B7A6B;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--dark);
+    color: var(--white);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* BACKGROUND */
+  .bg-wrap {
+    position: fixed; inset: 0; z-index: 0;
+    background: var(--dark);
+    overflow: hidden;
+  }
+  .bg-wrap::before {
+    content: '';
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse at 15% 20%, rgba(45,106,45,0.35) 0%, transparent 55%),
+      radial-gradient(ellipse at 85% 80%, rgba(200,146,42,0.15) 0%, transparent 50%),
+      radial-gradient(ellipse at 50% 50%, rgba(74,158,74,0.08) 0%, transparent 70%);
+  }
+  .bg-grid {
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(74,158,74,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(74,158,74,0.04) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+
+  /* LAYOUT */
+  .page {
+    position: relative; z-index: 1;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px 60px;
+  }
+
+  /* HEADER */
+  .header {
+    text-align: center;
+    margin-bottom: 40px;
+    animation: fadeDown 0.6s ease both;
+  }
+  .logo-wrap {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 28px;
+  }
+  .logo-wrap img {
+    height: 56px;
+    width: auto;
+    filter: brightness(1.1);
+  }
+  .eyebrow {
+    display: inline-block;
+    background: rgba(200,146,42,0.15);
+    border: 1px solid rgba(200,146,42,0.4);
+    color: var(--gold-light);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding: 0.4rem 1rem;
+    border-radius: 2px;
+    margin-bottom: 16px;
+  }
+  .header h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2.8rem, 8vw, 4.5rem);
+    line-height: 1;
+    color: var(--white);
+    letter-spacing: 1px;
+  }
+  .header h1 em {
+    font-style: normal;
+    color: var(--green-bright);
+  }
+  .header p {
+    color: rgba(255,255,255,0.6);
+    font-size: 1rem;
+    margin-top: 12px;
+    font-weight: 300;
+    line-height: 1.6;
+    max-width: 420px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* TRUST PILLS */
+  .trust-pills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 20px;
+    animation: fadeDown 0.6s 0.1s ease both;
+  }
+  .pill {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    color: rgba(255,255,255,0.75);
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 50px;
+    letter-spacing: 0.3px;
+  }
+
+  /* FORM CARD */
+  .form-card {
+    width: 100%;
+    max-width: 540px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 16px;
+    padding: 36px 32px;
+    backdrop-filter: blur(12px);
+    animation: fadeUp 0.6s 0.2s ease both;
+  }
+
+  @media(max-width: 500px) {
+    .form-card { padding: 28px 20px; }
+  }
+
+  .form-section-title {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--green-bright);
+    margin-bottom: 16px;
+    margin-top: 28px;
+    padding-top: 28px;
+    border-top: 1px solid rgba(255,255,255,0.07);
+  }
+  .form-section-title:first-child { margin-top: 0; padding-top: 0; border-top: none; }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+  @media(max-width: 480px) { .form-row { grid-template-columns: 1fr; } }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 14px;
+  }
+  .form-group:last-child { margin-bottom: 0; }
+
+  label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.55);
+  }
+
+  input, select, textarea {
+    background: rgba(255,255,255,0.06);
+    border: 1.5px solid rgba(255,255,255,0.12);
+    border-radius: 8px;
+    padding: 12px 14px;
+    font-size: 0.95rem;
+    font-family: 'DM Sans', sans-serif;
+    color: var(--white);
+    outline: none;
+    transition: border-color 0.2s, background 0.2s;
+    width: 100%;
+  }
+  input::placeholder, textarea::placeholder { color: rgba(255,255,255,0.25); }
+  input:focus, select:focus, textarea:focus {
+    border-color: var(--green-light);
+    background: rgba(74,158,74,0.08);
+  }
+  select { cursor: pointer; }
+  select option { background: #1a2a1a; color: var(--white); }
+  textarea { min-height: 100px; resize: vertical; }
+
+  /* SERVICES CHECKBOXES */
+  .services-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-top: 4px;
+  }
+  @media(max-width: 380px) { .services-grid { grid-template-columns: 1fr; } }
+
+  .check-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255,255,255,0.04);
+    border: 1.5px solid rgba(255,255,255,0.1);
+    border-radius: 8px;
+    padding: 10px 12px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: rgba(255,255,255,0.7);
+    transition: all 0.2s;
+    text-transform: none;
+    letter-spacing: 0;
+  }
+  .check-label:hover {
+    border-color: rgba(74,158,74,0.4);
+    background: rgba(74,158,74,0.08);
+    color: var(--white);
+  }
+  .check-label input[type="checkbox"] {
+    width: 16px; height: 16px;
+    padding: 0;
+    accent-color: var(--green-light);
+    flex-shrink: 0;
+    border: none;
+    background: none;
+  }
+  .check-label.checked {
+    border-color: var(--green-light);
+    background: rgba(74,158,74,0.15);
+    color: var(--white);
+  }
+
+  /* SUBMIT */
+  .submit-btn {
+    width: 100%;
+    background: linear-gradient(135deg, var(--green), var(--green-light));
+    color: var(--white);
+    border: none;
+    padding: 16px;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+    margin-top: 28px;
+    transition: all 0.25s;
+    position: relative;
+    overflow: hidden;
+  }
+  .submit-btn::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(135deg, var(--gold), var(--gold-light));
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .submit-btn:hover::before { opacity: 1; }
+  .submit-btn span { position: relative; z-index: 1; }
+  .submit-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+  .form-note {
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.35);
+    text-align: center;
+    margin-top: 14px;
+    line-height: 1.5;
+  }
+
+  /* SUCCESS STATE */
+  .success-screen {
+    display: none;
+    text-align: center;
+    padding: 20px 0;
+    animation: fadeUp 0.5s ease both;
+  }
+  .success-icon {
+    width: 72px; height: 72px;
+    background: linear-gradient(135deg, var(--green), var(--green-light));
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 2rem;
+    margin: 0 auto 20px;
+  }
+  .success-screen h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2rem;
+    color: var(--white);
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+  }
+  .success-screen p {
+    color: rgba(255,255,255,0.6);
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+  .success-screen .reply-time {
+    display: inline-block;
+    background: rgba(111,216,111,0.15);
+    border: 1px solid rgba(111,216,111,0.3);
+    color: var(--green-bright);
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 8px 20px;
+    border-radius: 50px;
+    margin-top: 20px;
+    letter-spacing: 0.5px;
+  }
+
+  /* FOOTER */
+  .page-footer {
+    margin-top: 36px;
+    text-align: center;
+    animation: fadeUp 0.6s 0.4s ease both;
+  }
+  .page-footer a {
+    color: rgba(255,255,255,0.4);
+    font-size: 0.8rem;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .page-footer a:hover { color: var(--gold-light); }
+  .contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 12px;
+  }
+  .contact-links a {
+    color: rgba(255,255,255,0.5);
+    font-size: 0.82rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: color 0.2s;
+  }
+  .contact-links a:hover { color: var(--white); }
+
+  /* ANIMATIONS */
+  @keyframes fadeDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
+</head>
+<body>
+
+<div class="bg-wrap">
+  <div class="bg-grid"></div>
+</div>
+
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="logo-wrap">
+      <img src="logo.png" alt="OSM Pro">
+    </div>
+    <div class="eyebrow">Free Quote — No Obligation</div>
+    <h1>Get Your <em>Free</em><br>Quote Today</h1>
+    <p>Tell us about your property and we'll get back to you within 24 hours with a no-obligation estimate.</p>
+    <div class="trust-pills">
+      <span class="pill">✅ Fully Insured</span>
+      <span class="pill">⭐ 5-Star Rated</span>
+      <span class="pill">💰 Always Free</span>
+      <span class="pill">📍 Guelph & Area</span>
+    </div>
+  </div>
+
+  <!-- FORM CARD -->
+  <div class="form-card">
+
+    <!-- SUCCESS SCREEN (hidden by default) -->
+    <div class="success-screen" id="successScreen">
+      <div class="success-icon">✅</div>
+      <h3>Quote Request Sent!</h3>
+      <p>Thanks! We've received your request and will get back to you with your free estimate.</p>
+      <div class="reply-time">⏱ We reply within 24 hours</div>
+    </div>
+
+    <!-- FORM -->
+    <div id="quoteForm">
+
+      <div class="form-section-title">Your Contact Info</div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="fname">First Name *</label>
+          <input type="text" id="fname" placeholder="Jane" required>
+        </div>
+        <div class="form-group">
+          <label for="lname">Last Name *</label>
+          <input type="text" id="lname" placeholder="Smith" required>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="email">Email *</label>
+          <input type="email" id="email" placeholder="jane@email.com" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" placeholder="(437) 000-0000">
+        </div>
+      </div>
+
+      <div class="form-section-title">Your Property</div>
+      <div class="form-group">
+        <label for="address">Property Address</label>
+        <input type="text" id="address" placeholder="123 Main St, Guelph">
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="ptype">Property Type *</label>
+          <select id="ptype" required>
+            <option value="" disabled selected>Select...</option>
+            <option>Residential – Single Home</option>
+            <option>Residential – Condo / Townhouse</option>
+            <option>Rental / Investment Property</option>
+            <option>Commercial Property</option>
+            <option>Multi-Unit Building</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="frequency">Frequency</label>
+          <select id="frequency">
+            <option value="" disabled selected>Select...</option>
+            <option>One-Time Job</option>
+            <option>Weekly</option>
+            <option>Bi-Weekly</option>
+            <option>Monthly</option>
+            <option>Seasonal</option>
+            <option>On-Call / As Needed</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-section-title">Services Needed</div>
+      <div class="services-grid" id="servicesGrid">
+        <label class="check-label"><input type="checkbox" value="Lawn Care"> 🌿 Lawn Care</label>
+        <label class="check-label"><input type="checkbox" value="Pressure Washing"> 💦 Pressure Washing</label>
+        <label class="check-label"><input type="checkbox" value="Window Cleaning"> 🪟 Window Cleaning</label>
+        <label class="check-label"><input type="checkbox" value="Gutter Cleaning"> 🏠 Gutter Cleaning</label>
+        <label class="check-label"><input type="checkbox" value="Cleaning Services"> ✨ Cleaning Services</label>
+        <label class="check-label"><input type="checkbox" value="Junk Removal"> 🚛 Junk Removal</label>
+        <label class="check-label"><input type="checkbox" value="Holiday Lights"> 💡 Holiday Lights</label>
+        <label class="check-label"><input type="checkbox" value="Snow Removal"> ❄️ Snow Removal</label>
+      </div>
+
+      <div class="form-section-title">Additional Details</div>
+      <div class="form-group">
+        <label for="message">Tell us more (optional)</label>
+        <textarea id="message" placeholder="Any details about your property, specific concerns, or the best time to reach you..."></textarea>
+      </div>
+
+      <button class="submit-btn" onclick="submitQuote()" id="submitBtn">
+        <span>📨 Send My Free Quote Request</span>
+      </button>
+      <p class="form-note">We never share your info. By submitting you agree to be contacted at the details provided.</p>
+
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="page-footer">
+    <a href="https://osmpro.ca">← Back to osmpro.ca</a>
+    <div class="contact-links">
+      <a href="tel:+12362056464">📞 (236) 205-6464</a>
+      <a href="mailto:inquiry@osmpro.ca">📧 inquiry@osmpro.ca</a>
+      <a href="https://www.instagram.com/osmpro.ca" target="_blank">📷 @osmpro.ca</a>
+    </div>
+  </div>
+
+</div>
+
+<script>
+// Checkbox visual toggle
+document.querySelectorAll('.check-label').forEach(label => {
+  label.addEventListener('change', () => {
+    if (label.querySelector('input').checked) {
+      label.classList.add('checked');
+    } else {
+      label.classList.remove('checked');
+    }
+  });
+});
+
+async function submitQuote() {
+  const fname = document.getElementById('fname').value.trim();
+  const lname = document.getElementById('lname').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const phone = document.getElementById('phone').value.trim();
+  const address = document.getElementById('address').value.trim();
+  const ptype = document.getElementById('ptype').value;
+  const frequency = document.getElementById('frequency').value;
+  const message = document.getElementById('message').value.trim();
+
+  if (!fname || !lname || !email || !ptype) {
+    alert('Please fill in your name, email and property type.');
+    return;
+  }
+
+  const services = [...document.querySelectorAll('#servicesGrid input:checked')]
+    .map(cb => cb.value).join(', ') || 'Not specified';
+
+  const btn = document.getElementById('submitBtn');
+  btn.disabled = true;
+  btn.querySelector('span').textContent = 'Sending...';
+
+  const body = `New Quote Request – OSMPRO Instagram Page
+=============================================
+
+CONTACT
+Name:    ${fname} ${lname}
+Email:   ${email}
+Phone:   ${phone || 'Not provided'}
+
+PROPERTY
+Address:       ${address || 'Not provided'}
+Type:          ${ptype}
+Frequency:     ${frequency || 'Not specified'}
+
+SERVICES REQUESTED
+${services}
+
+ADDITIONAL DETAILS
+${message || 'None'}
+
+=============================================
+Submitted via osmpro.ca/quote`;
+
+  try {
+    const res = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        access_key: 'cdac509a-5446-439d-a436-313bc0e4cd00',
+        subject: `📋 Quote Request (Instagram) – ${fname} ${lname}`,
+        from_name: `${fname} ${lname}`,
+        replyto: email,
+        message: body
+      })
+    });
+    const result = await res.json();
+    if (result.success) {
+      document.getElementById('quoteForm').style.display = 'none';
+      document.getElementById('successScreen').style.display = 'block';
+    } else {
+      throw new Error('Failed');
+    }
+  } catch(e) {
+    btn.disabled = false;
+    btn.querySelector('span').textContent = '📨 Send My Free Quote Request';
+    alert('Something went wrong. Please email us directly at inquiry@osmpro.ca or call (236) 205-6464.');
+  }
+}
+</script>
+
+</body>
+</html>
