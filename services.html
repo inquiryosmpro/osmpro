@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Services | OSM Pro Guelph – All 8 Property Maintenance Services</title>
+<meta name="description" content="Lawn care, pressure washing, window cleaning, gutter cleaning, cleaning services, junk removal, holiday lights & snow removal in Guelph, ON.">
+<link rel="canonical" href="https://osmpro.ca/services.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="immersive_shared.css">
+<style>
+/* SERVICE DETAIL SECTIONS */
+.svc-section{padding:120px 5%;position:relative;overflow:hidden}
+.svc-section:nth-child(odd){background:var(--ink)}
+.svc-section:nth-child(even){background:var(--ink2)}
+.svc-inner{display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center;max-width:1200px;margin:0 auto}
+.svc-section:nth-child(even) .svc-inner{direction:rtl}
+.svc-section:nth-child(even) .svc-inner>*{direction:ltr}
+.svc-img-wrap{position:relative;height:480px;overflow:hidden}
+.svc-img-wrap img{width:100%;height:100%;object-fit:cover;filter:brightness(.8) saturate(.7);transition:transform .8s var(--ease-out-expo),filter .5s}
+.svc-img-wrap:hover img{transform:scale(1.05);filter:brightness(.7) saturate(.6)}
+.svc-img-badge{position:absolute;bottom:20px;left:20px;background:var(--gold);color:var(--ink);font-size:.62rem;letter-spacing:3px;text-transform:uppercase;padding:5px 14px;font-weight:600}
+.svc-img-num{position:absolute;top:20px;right:20px;font-family:'Bebas Neue',sans-serif;font-size:5rem;color:rgba(255,255,255,.08);line-height:1;letter-spacing:-2px}
+.svc-text .s-eyebrow{margin-bottom:1.5rem}
+.svc-text h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(3rem,5vw,5rem);line-height:.88;letter-spacing:-1px;color:var(--white);margin-bottom:1.25rem}
+.svc-text h2 em{color:var(--gold-lit);font-style:normal}
+.svc-text p{font-size:.93rem;color:rgba(240,237,230,.5);line-height:1.85;margin-bottom:1.5rem}
+.svc-includes{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:2rem}
+.svc-includes li{display:flex;align-items:flex-start;gap:8px;font-size:.82rem;color:rgba(240,237,230,.65);line-height:1.4}
+.svc-includes li::before{content:'→';color:var(--gold);font-size:.75rem;flex-shrink:0;margin-top:2px}
+.svc-btns{display:flex;gap:10px;flex-wrap:wrap}
+/* Seasonal */
+.seasonal-section{padding:120px 5%;background:var(--charcoal)}
+.seasonal-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin-top:4rem;background:rgba(255,255,255,.03)}
+.season-card{padding:3rem 2rem;position:relative;overflow:hidden;transition:filter .3s}
+.season-card:hover{filter:brightness(1.1)}
+.season-card.spring{background:linear-gradient(160deg,#0d1f0b,#183518)}
+.season-card.summer{background:linear-gradient(160deg,#1a1f08,#2a3a0e)}
+.season-card.fall{background:linear-gradient(160deg,#1f1008,#3a1a08)}
+.season-card.winter{background:linear-gradient(160deg,#0c1420,#0f1e2f)}
+.season-emoji{font-size:2.5rem;display:block;margin-bottom:1.5rem}
+.season-card h3{font-family:'Bebas Neue',sans-serif;font-size:2rem;letter-spacing:1px;color:var(--white);margin-bottom:1.25rem}
+.season-card ul{list-style:none}
+.season-card li{font-size:.83rem;color:rgba(240,237,230,.5);padding:.35rem 0 .35rem 18px;position:relative;line-height:1.4}
+.season-card li::before{content:'—';position:absolute;left:0;color:var(--gold);font-size:.7rem}
+.season-bg-txt{position:absolute;bottom:-15px;right:-5px;font-family:'Bebas Neue',sans-serif;font-size:7rem;color:rgba(255,255,255,.025);line-height:1;pointer-events:none}
+@media(max-width:900px){.svc-inner{grid-template-columns:1fr;gap:3rem}.svc-section:nth-child(even) .svc-inner{direction:ltr}.svc-img-wrap{height:280px}.seasonal-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.svc-includes{grid-template-columns:1fr}.seasonal-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div id="cursor"><div id="cursor-dot"></div><div id="cursor-ring"></div></div>
+<div id="page-transition"></div>
+<div class="promo-bar">🎉 <span>New Business Special:</span> 10% off your first service — <a href="contact.html" onclick="navTo(event,'contact.html')">Book online today!</a></div>
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Navigation">
+  <a class="mob-link" href="index.html" onclick="navTo(event,'index.html')">Home</a>
+  <a class="mob-link" href="services.html" onclick="navTo(event,'services.html')">Services</a>
+  <a class="mob-link" href="packages.html" onclick="navTo(event,'packages.html')">Packages</a>
+  <a class="mob-link" href="about.html" onclick="navTo(event,'about.html')">About</a>
+  <a class="mob-cta-link" href="contact.html" onclick="navTo(event,'contact.html')">Free Quote</a>
+</div>
+<nav id="mainNav">
+  <div class="nav-logo"><img src="logo.png" alt="OSM Pro" height="44" width="auto"></div>
+  <ul class="nav-links"><li><a href="index.html" onclick="navTo(event,'index.html')">Home</a></li><li><a href="services.html" class="active" onclick="navTo(event,'services.html')">Services</a></li><li><a href="packages.html" onclick="navTo(event,'packages.html')">Packages</a></li><li><a href="about.html" onclick="navTo(event,'about.html')">About</a></li></ul>
+  <div class="nav-right"><a href="tel:+12362056464" style="color:rgba(240,237,230,.4);text-decoration:none;font-size:.72rem;letter-spacing:1px">📞 (236) 205-6464</a><a href="contact.html" class="nav-cta" onclick="navTo(event,'contact.html')">Free Quote</a><button class="hamburger" id="hamburger" aria-label="Menu" onclick="toggleMobile()"><span></span><span></span><span></span></button></div>
+</nav>
+
+<main id="main">
+<div class="page-hero">
+  <div class="page-hero-bg" style="background-image:url('IMG_7735.png')"></div>
+  <div class="page-hero-overlay"></div>
+  <div class="page-hero-content">
+    <div class="page-eyebrow">What We Do</div>
+    <h1 class="page-h1"><span class="ph-line"><span class="ph-inner">8 Services.</span></span><span class="ph-line"><span class="ph-inner"><em>One Team.</em></span></span></h1>
+    <p class="page-sub">Everything your property needs, handled by one trusted local team. From lawn care to snow removal — year-round coverage, zero hassle. <a href="packages.html" onclick="navTo(event,'packages.html')" style="color:var(--gold-lit)">View packages →</a></p>
+  </div>
+</div>
+<div class="ticker"><div class="ticker-track"><span class="ticker-item"><span class="ticker-dot"></span>Lawn Care</span><span class="ticker-item"><span class="ticker-dot"></span>Pressure Washing</span><span class="ticker-item"><span class="ticker-dot"></span>Window Cleaning</span><span class="ticker-item"><span class="ticker-dot"></span>Gutter Cleaning</span><span class="ticker-item"><span class="ticker-dot"></span>Cleaning Services</span><span class="ticker-item"><span class="ticker-dot"></span>Junk Removal</span><span class="ticker-item"><span class="ticker-dot"></span>Holiday Lights</span><span class="ticker-item"><span class="ticker-dot"></span>Snow Removal</span><span class="ticker-item"><span class="ticker-dot"></span>Lawn Care</span><span class="ticker-item"><span class="ticker-dot"></span>Pressure Washing</span><span class="ticker-item"><span class="ticker-dot"></span>Window Cleaning</span><span class="ticker-item"><span class="ticker-dot"></span>Gutter Cleaning</span><span class="ticker-item"><span class="ticker-dot"></span>Cleaning Services</span><span class="ticker-item"><span class="ticker-dot"></span>Junk Removal</span><span class="ticker-item"><span class="ticker-dot"></span>Holiday Lights</span><span class="ticker-item"><span class="ticker-dot"></span>Snow Removal</span></div></div>
+
+<section class="svc-section" id="lawn-care"><div class="svc-inner"><div class="svc-img-wrap reveal-l"><img src="IMG_7735.png" alt="Lawn Care Guelph" loading="lazy"><div class="svc-img-badge">Year-Round Service</div><div class="svc-img-num">01</div></div><div class="svc-text reveal-r"><div class="s-eyebrow">Service 01</div><h2>Lawn <em>Care</em></h2><p>A healthy green lawn starts with consistent professional care. From spring seeding to fall cleanup, our programs keep your property looking its best all season without you lifting a finger.</p><ul class="svc-includes"><li>Weekly/bi-weekly mowing</li><li>Edging & trimming</li><li>Grass clipping cleanup</li><li>Fertilization programs</li><li>Spring & fall cleanup</li><li>Aeration & overseeding</li><li>Weed control</li><li>Mulch & bed maintenance</li></ul><div class="svc-btns"><a href="packages.html#lawn" class="mag-btn mag-btn-gold" onclick="navTo(event)" data-magnetic><span>View Lawn Packages</span></a><a href="contact.html" class="mag-btn mag-btn-outline" onclick="navTo(event,'contact.html')">Get a Quote</a></div></div></div></section>
+
+<section class="svc-section" id="pressure-washing"><div class="svc-inner"><div class="svc-img-wrap reveal-r"><img src="IMG_7738.png" alt="Pressure Washing Guelph" loading="lazy"><div class="svc-img-badge">Curb Appeal Boost</div><div class="svc-img-num">02</div></div><div class="svc-text reveal-l"><div class="s-eyebrow">Service 02</div><h2>Pressure <em>Washing</em></h2><p>Years of dirt and grime removed in a single visit. Our high-pressure and soft-wash equipment handles every exterior surface — leaving your property looking brand new.</p><ul class="svc-includes"><li>Driveway & walkways</li><li>House siding</li><li>Deck & patio</li><li>Fence washing</li><li>Roof moss treatment</li><li>Soft-wash upgrade</li><li>Driveway sealing</li><li>Before & after photos</li></ul><div class="svc-btns"><a href="packages.html#pressure" class="mag-btn mag-btn-gold" onclick="navTo(event)" data-magnetic><span>View Packages</span></a><a href="contact.html" class="mag-btn mag-btn-outline" onclick="navTo(event,'contact.html')">Get a Quote</a></div></div></div></section>
+
+<section class="svc-section" id="window-cleaning"><div class="svc-inner"><div class="svc-img-wrap reveal-l"><img src="IMG_7733.png" alt="Window Cleaning Guelph" loading="lazy"><div class="svc-img-badge">Interior & Exterior</div><div class="svc-img-num">03</div></div><div class="svc-text reveal-r"><div class="s-eyebrow">Service 03</div><h2>Window <em>Cleaning</em></h2><p>Crystal-clear, streak-free windows transform how any home or business looks and feels. Professional solutions for flawless results inside and out.</p><ul class="svc-includes"><li>Exterior window cleaning</li><li>Interior window cleaning</li><li>Screen removal & cleaning</li><li>Frame & sill detail</li><li>Track cleaning</li><li>Hard water stain removal</li><li>Post-construction clean</li><li>Sealant protection</li></ul><div class="svc-btns"><a href="packages.html#window" class="mag-btn mag-btn-gold" onclick="navTo(event)" data-magnetic><span>View Packages</span></a><a href="contact.html" class="mag-btn mag-btn-outline" onclick="navTo(event,'contact.html')">Get a Quote</a></div></div></div></section>
+
+<section class="svc-section" id="gutter-cleaning"><div class="svc-inner"><div class="svc-img-wrap reveal-r"><img src="IMG_7734.png" alt="Gutter Cleaning Guelph" loading="lazy"><div class="svc-img-badge">Protective Service</div><div class="svc-img-num">04</div></div><div class="svc-text reveal-l"><div class="s-eyebrow">Service 04</div><h2>Gutter <em>Cleaning</em></h2><p>Blocked gutters lead to water damage and costly repairs. We clean, flush and inspect — keeping your home fully protected every season.</p><ul class="svc-includes"><li>Full debris removal</li><li>Downspout flush & check</li><li>Visual inspection</li><li>Exterior brightening</li><li>Written condition report</li><li>Gutter guard install</li><li>Premium mesh systems</li><li>Annual maintenance plans</li></ul><div class="svc-btns"><a href="packages.html#gutter" class="mag-btn mag-btn-gold" onclick="navTo(event)" data-magnetic><span>View Packages</span></a><a href="contact.html" class="mag-btn mag-btn-outline" onclick="navTo(event,'contact.html')">Get a Quote</a></div></div></div></section>
+
+<section class="svc-section" id="cleaning-services"><div class="svc-inner"><div class="svc-img-wrap reveal-l"><img src="IMG_7739.png" alt="Cleaning Services Guelph" loading="lazy"><div class="svc-img-badge">Residential & Commercial</div><div class="svc-img-num">05</div></div><div class="svc-text reveal-r"><div class="s-eyebrow">Service 05</div><h2>Cleaning <em>Services</em></h2><p>Recurring maintenance cleans or one-time deep cleans — spotless results every visit. Perfect for homes, rentals, move-ins and commercial spaces.</p><ul class="svc-includes"><li>Regular maintenance clean</li><li>Deep cleaning service</li><li>Move-in / move-out clean</li><li>Inside appliances</li><li>Bathroom sanitizing</li><li>Baseboard & fixture clean</li><li>Cabinet interior detail</li><li>Flexible scheduling</li></ul><div class="svc-btns"><a href="packages.html#cleaning" class="mag-btn mag-btn-gold" onclick="navTo(event)" data-magnetic><span>View Packages</span></a><a href="contact.html" class="mag-btn mag-btn-outline" onclick="navTo(event,'contact.html')">Get a Quote</a></div></div></div></section>
+
+<section class="svc-section" id="junk-removal"><div class="svc-inner"><div class="svc-img-wrap reveal-r"><img src="IMG%207774.png" alt="Junk Removal Guelph" loading="lazy"><div class="svc-img-badge">Same-Day Available</div><div class="svc-img-num">06</div></div><div class="svc-text reveal-l"><div class="s-eyebrow">Service 06</div><h2>Junk <em>Removal</em></h2><p>Clear out your garage, basement or yard fast. We haul everything away responsibly — furniture, appliances, debris, yard waste and more. We sort, donate and recycle wherever possible.</p><ul class="svc-includes"><li>Furniture & appliances</li><li>Yard waste & debris</li><li>Construction material</li><li>Small to full truck loads</li><li>Same-day booking</li><li>Donation drop-off</li><li>Responsible recycling</li><li>Estate & garage cleanouts</li></ul><div class="svc-btns"><a href="packages.html#junk" class="mag-btn mag-btn-gold" onclick="navTo(event)" data-magnetic><span>View Packages</span></a><a href="contact.html" class="mag-btn mag-btn-outline" onclick="navTo(event,'contact.html')">Get a Quote</a></div></div></div></section>
+
+<section class="svc-section" id="holiday-lights"><div class="svc-inner"><div class="svc-img-wrap reveal-l"><img src="IMG_7736.png" alt="Holiday Lights Guelph" loading="lazy"><div class="svc-img-badge">Seasonal Install</div><div class="svc-img-num">07</div></div><div class="svc-text reveal-r"><div class="s-eyebrow">Service 07</div><h2>Holiday <em>Lights</em></h2><p>Make your home the star of the street. We handle design, professional installation, post-season takedown and storage. No ladders, no tangles, no risk. Just the glow.</p><ul class="svc-includes"><li>Roofline light install</li><li>Tree & shrub wrapping</li><li>Pathway lighting</li><li>Custom lighting design</li><li>Animated & colour-changing</li><li>Professional-grade hardware</li><li>Post-season takedown</li><li>Off-season storage</li></ul><div class="svc-btns"><a href="packages.html#lights" class="mag-btn mag-btn-gold" onclick="navTo(event)" data-magnetic><span>View Packages</span></a><a href="contact.html" class="mag-btn mag-btn-outline" onclick="navTo(event,'contact.html')">Get a Quote</a></div></div></div></section>
+
+<section class="svc-section" id="snow-removal"><div class="svc-inner"><div class="svc-img-wrap reveal-r"><img src="IMG_7740.png" alt="Snow Removal Guelph" loading="lazy"><div class="svc-img-badge">On-Call & Seasonal</div><div class="svc-img-num">08</div></div><div class="svc-text reveal-l"><div class="s-eyebrow">Service 08</div><h2>Snow <em>Removal</em></h2><p>Never shovel again. We monitor the forecast and dispatch automatically. Driveways, walkways and commercial parking lots — always clear before you need them.</p><ul class="svc-includes"><li>Driveway plowing</li><li>Walkway shoveling</li><li>Ice melt & salting</li><li>Seasonal contracts</li><li>Auto-dispatch on snowfall</li><li>Commercial parking lots</li><li>Salt truck treatment</li><li>24/7 storm response</li></ul><div class="svc-btns"><a href="packages.html#snow" class="mag-btn mag-btn-gold" onclick="navTo(event)" data-magnetic><span>View Packages</span></a><a href="contact.html" class="mag-btn mag-btn-outline" onclick="navTo(event,'contact.html')">Get a Quote</a></div></div></div></section>
+
+<section class="seasonal-section"><div class="s-eyebrow reveal">All Year Coverage</div><h2 class="reveal s-title">Right Service, <em>Right Season</em></h2><div class="seasonal-grid"><div class="season-card spring reveal"><span class="season-emoji">🌸</span><h3>Spring</h3><ul><li>Lawn aeration & cleanup</li><li>Gutter cleaning</li><li>Window washing</li><li>Pressure washing</li><li>Junk removal</li></ul><span class="season-bg-txt">S</span></div><div class="season-card summer reveal d1"><span class="season-emoji">☀️</span><h3>Summer</h3><ul><li>Weekly lawn mowing</li><li>Cleaning services</li><li>Deck & patio wash</li><li>Window cleaning</li><li>Gutter guard install</li></ul><span class="season-bg-txt">S</span></div><div class="season-card fall reveal d2"><span class="season-emoji">🍂</span><h3>Fall</h3><ul><li>Leaf removal</li><li>Gutter cleaning</li><li>Holiday light install</li><li>Winterization</li><li>Final pressure wash</li></ul><span class="season-bg-txt">F</span></div><div class="season-card winter reveal d3"><span class="season-emoji">❄️</span><h3>Winter</h3><ul><li>Snow plowing</li><li>Walkway shoveling</li><li>Ice melt & salting</li><li>Light removal</li><li>Storm response 24/7</li></ul><span class="season-bg-txt">W</span></div></div></section>
+
+<section class="cta-band"><div class="cta-band-inner"><h2 class="reveal">Ready to Get <em>Started?</em></h2><p class="reveal">Free, no-obligation quote for any service. We respond within 24 hours.</p><div class="cta-btns reveal"><a href="contact.html" class="mag-btn mag-btn-gold" onclick="navTo(event,'contact.html')" data-magnetic><span>Get a Free Quote</span></a><a href="packages.html" class="mag-btn mag-btn-outline" onclick="navTo(event,'packages.html')">View All Packages</a></div></div></section>
+</main>
+
+<div class="sticky-call"><a href="tel:+12362056464"><div class="pulse-dot"></div><span>📞 (236) 205-6464</span></a></div>
+<footer><div class="footer-inner"><div class="footer-logo"><img src="logo.png" alt="OSM Pro" height="42" width="auto"></div><div class="footer-nav-group"><h4>Navigate</h4><div class="footer-links"><a href="index.html" onclick="navTo(event,'index.html')">Home</a><a href="services.html" onclick="navTo(event,'services.html')">Services</a><a href="packages.html" onclick="navTo(event,'packages.html')">Packages</a><a href="about.html" onclick="navTo(event,'about.html')">About</a><a href="contact.html" onclick="navTo(event,'contact.html')">Contact</a></div></div><div class="footer-about">OSM Pro – Locally owned in <strong>Guelph, ON</strong>. Serving Guelph, Cambridge, Kitchener, Waterloo, Milton, Burlington & Hamilton.</div><div class="footer-social"><a href="https://www.instagram.com/osmpro.ca" target="_blank" rel="noopener">📷</a><a href="https://www.tiktok.com/@osmpro.ca" target="_blank" rel="noopener">🎵</a><a href="tel:+12362056464">📞</a><a href="mailto:inquiry@osmpro.ca">📧</a></div></div><div class="footer-copy">© 2026 OSM Pro – One Stop Maintenance Pro. All rights reserved.</div></footer>
+<script>
+/* PAGE TRANSITIONS */
+function navTo(e,url){
+  e.preventDefault();
+  var dest=url||(e.currentTarget&&e.currentTarget.getAttribute('href'));
+  if(!dest)return;
+  if(dest.startsWith('#')){
+    var el=document.querySelector(dest);
+    if(el)el.scrollIntoView({behavior:'smooth'});
+    return;
+  }
+  var t=document.getElementById('page-transition');
+  if(t){t.classList.remove('leaving');t.classList.add('entering');}
+  setTimeout(function(){window.location.href=dest;},600);
+}
+window.addEventListener('pageshow',function(){
+  var t=document.getElementById('page-transition');
+  if(!t)return;
+  t.style.animation='none';
+  t.style.clipPath='inset(100% 0 0 0)';
+  void t.offsetWidth;
+  t.style.animation='';
+  t.classList.remove('entering');
+  t.classList.add('leaving');
+});
+/* CURSOR */
+(function(){const dot=document.getElementById('cursor-dot'),ring=document.getElementById('cursor-ring');if(!dot||!ring)return;let mx=0,my=0,rx=0,ry=0;document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;dot.style.left=mx+'px';dot.style.top=my+'px';});function anim(){rx+=(mx-rx)*.12;ry+=(my-ry)*.12;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(anim);}anim();document.querySelectorAll('a,button,[data-magnetic]').forEach(el=>{el.addEventListener('mouseenter',()=>document.body.classList.add('cursor-hover'));el.addEventListener('mouseleave',()=>document.body.classList.remove('cursor-hover'));});document.querySelectorAll('input,textarea,select').forEach(el=>{el.addEventListener('mouseenter',()=>document.body.classList.add('cursor-text'));el.addEventListener('mouseleave',()=>document.body.classList.remove('cursor-text'));});document.addEventListener('mousedown',()=>document.body.classList.add('cursor-click'));document.addEventListener('mouseup',()=>document.body.classList.remove('cursor-click'));})();
+/* MAGNETIC */
+document.querySelectorAll('[data-magnetic]').forEach(btn=>{btn.addEventListener('mousemove',e=>{const r=btn.getBoundingClientRect(),x=e.clientX-r.left-r.width/2,y=e.clientY-r.top-r.height/2;btn.style.transform=`translate(${x*.3}px,${y*.3}px)`;});btn.addEventListener('mouseleave',()=>btn.style.transform='');});
+/* NAV */
+window.addEventListener('scroll',function(){
+  var nav=document.getElementById('mainNav');
+  if(!nav)return;
+  var scrolled=window.scrollY>60;
+  nav.classList.toggle('scrolled',scrolled);
+  nav.style.top=scrolled?'0':'37px';
+},{passive:true});
+/* MOBILE MENU */
+function toggleMobile(){const m=document.getElementById('mobileMenu'),b=document.getElementById('hamburger'),o=m.classList.toggle('open');b.classList.toggle('open',o);document.body.style.overflow=o?'hidden':'';}
+function closeMobile(){document.getElementById('mobileMenu').classList.remove('open');document.getElementById('hamburger').classList.remove('open');document.body.style.overflow='';}
+/* REVEAL */
+const obs=new IntersectionObserver(e=>e.forEach(en=>{if(en.isIntersecting)en.target.classList.add('visible')}),{threshold:.08,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal,.reveal-l,.reveal-r,.reveal-s').forEach(el=>obs.observe(el));
+/* FAQ */
+function toggleFaq(btn){const item=btn.parentElement,open=item.classList.toggle('open');btn.setAttribute('aria-expanded',open);}
+/* PARALLAX */
+const pHero=document.querySelector('.page-hero-bg');if(pHero)window.addEventListener('scroll',()=>pHero.style.transform=`translateY(${scrollY*.2}px)`,{passive:true});
+/* CARD GLOW */
+function cardGlow(el,e){const r=el.getBoundingClientRect();el.style.setProperty('--mx',((e.clientX-r.left)/r.width*100)+'%');el.style.setProperty('--my',((e.clientY-r.top)/r.height*100)+'%');}
+</script>
+</body></html>
