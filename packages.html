@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Packages & Pricing | OSM Pro Guelph</title>
+<meta name="description" content="OSM Pro service packages and pricing tiers for all 8 property maintenance services in Guelph, ON. Starter, Standard and Premium tiers.">
+<link rel="canonical" href="https://osmpro.ca/packages.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="immersive_shared.css">
+<style>
+.pkg-section{padding:100px 5%;background:var(--charcoal)}
+/* Animated tabs */
+.pkg-tabs{display:flex;flex-wrap:wrap;gap:2px;background:rgba(255,255,255,.04);margin:4rem 0 0}
+.pkg-tab{background:var(--ink2);color:rgba(240,237,230,.35);border:none;padding:.9rem 1.4rem;font-family:'DM Sans',sans-serif;font-size:.72rem;font-weight:500;letter-spacing:2px;text-transform:uppercase;transition:all .3s var(--ease-out-expo);cursor:pointer;position:relative;overflow:hidden}
+.pkg-tab::before{content:'';position:absolute;inset:0;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .4s var(--ease-out-expo);z-index:0}
+.pkg-tab span{position:relative;z-index:1}
+.pkg-tab:hover{color:var(--cream)}
+.pkg-tab.active{color:var(--ink)}
+.pkg-tab.active::before{transform:scaleX(1)}
+.pkg-panel{display:none;animation:panel-in .5s var(--ease-out-expo)}
+.pkg-panel.active{display:block}
+@keyframes panel-in{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+/* Package grid */
+.pkg-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:rgba(255,255,255,.04);margin-top:2px}
+.pkg-card{background:var(--ink2);padding:2.5rem 2rem;display:flex;flex-direction:column;position:relative;transition:background .4s var(--ease-out-expo);overflow:hidden}
+.pkg-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);transform:scaleX(0);transition:transform .5s var(--ease-out-expo)}
+.pkg-card:hover::before{transform:scaleX(1)}
+.pkg-card:hover{background:rgba(22,28,22,.9)}
+.pkg-card.featured{background:var(--forest);padding-top:3.5rem}
+.pkg-badge{position:absolute;top:0;left:0;right:0;background:var(--gold);color:var(--ink);font-size:.6rem;font-weight:600;letter-spacing:3px;text-transform:uppercase;padding:5px;text-align:center}
+.pkg-tier{font-size:.62rem;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:.5rem}
+.pkg-card h3{font-family:'Bebas Neue',sans-serif;font-size:2.2rem;letter-spacing:.5px;color:var(--white);margin-bottom:.75rem;line-height:.95}
+.pkg-desc{font-size:.85rem;color:rgba(240,237,230,.4);line-height:1.7;margin-bottom:1.5rem;flex-grow:1}
+.pkg-card ul{list-style:none;margin-bottom:1.5rem;display:flex;flex-direction:column;gap:.45rem}
+.pkg-card li{font-size:.83rem;color:rgba(240,237,230,.65);display:flex;align-items:flex-start;gap:8px;line-height:1.4}
+.pkg-card li::before{content:'→';color:var(--gold);font-size:.75rem;flex-shrink:0;margin-top:2px}
+.pkg-card li.no::before{content:'—';color:rgba(255,255,255,.15)}
+.pkg-card li.no{color:rgba(240,237,230,.2)}
+.pkg-price{font-size:.82rem;color:rgba(240,237,230,.3);border-top:1px solid rgba(255,255,255,.06);padding-top:1rem;margin-bottom:1rem;letter-spacing:1px}
+.pkg-price span{color:var(--gold-lit);font-size:1rem}
+.pkg-cta{display:block;text-align:center;background:transparent;color:var(--gold-lit);border:1px solid rgba(200,145,42,.4);padding:.8rem;font-family:'DM Sans',sans-serif;font-size:.72rem;font-weight:500;letter-spacing:2px;text-transform:uppercase;text-decoration:none;cursor:pointer;transition:all .3s var(--ease-out-expo);position:relative;overflow:hidden}
+.pkg-cta::before{content:'';position:absolute;inset:0;background:var(--gold);transform:translateX(-101%);transition:transform .4s var(--ease-out-expo);z-index:0}
+.pkg-cta span{position:relative;z-index:1}
+.pkg-cta:hover{color:var(--ink)}.pkg-cta:hover::before{transform:translateX(0)}
+.pkg-card.featured .pkg-cta{background:var(--gold);color:var(--ink)}
+.pkg-card.featured .pkg-cta::before{background:var(--gold-lit)}
+@media(max-width:900px){.pkg-grid{grid-template-columns:1fr;max-width:440px}.pkg-tabs{flex-wrap:wrap}}
+
+/* Cursor circle/dot removed */
+#cursor,#cursor-dot,#cursor-ring{display:none!important}
+body{cursor:auto!important}
+</style>
+</head>
+<body>
+
+<div id="page-transition"></div>
+<div class="promo-bar">🎉 <span>New Business Special:</span> 10% off your first service — <a href="contact.html" onclick="navTo(event,'contact.html')">Book today!</a></div>
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Navigation">
+  <a class="mob-link" href="index.html" onclick="navTo(event,'index.html')">Home</a>
+  <a class="mob-link" href="services.html" onclick="navTo(event,'services.html')">Services</a>
+  <a class="mob-link" href="packages.html" onclick="navTo(event,'packages.html')">Packages</a>
+  <a class="mob-link" href="about.html" onclick="navTo(event,'about.html')">About</a>
+  <a class="mob-cta-link" href="contact.html" onclick="navTo(event,'contact.html')">Free Quote</a>
+</div>
+<nav id="mainNav">
+  <div class="nav-logo"><img src="logo.png" alt="OSM Pro" height="44" width="auto"></div>
+  <ul class="nav-links"><li><a href="index.html" onclick="navTo(event,'index.html')">Home</a></li><li><a href="services.html" onclick="navTo(event,'services.html')">Services</a></li><li><a href="packages.html" class="active" onclick="navTo(event,'packages.html')">Packages</a></li><li><a href="about.html" onclick="navTo(event,'about.html')">About</a></li></ul>
+  <div class="nav-right"><a href="tel:+12362056464" style="color:rgba(240,237,230,.4);text-decoration:none;font-size:.72rem;letter-spacing:1px">📞 (236) 205-6464</a><a href="contact.html" class="nav-cta" onclick="navTo(event,'contact.html')">Free Quote</a><button class="hamburger" id="hamburger" aria-label="Menu" onclick="toggleMobile()"><span></span><span></span><span></span></button></div>
+</nav>
+
+<main id="main">
+<div class="page-hero">
+  <div class="page-hero-bg" style="background-image:url('IMG_7738.png')"></div>
+  <div class="page-hero-overlay"></div>
+  <div class="page-hero-content">
+    <div class="page-eyebrow">Service Packages</div>
+    <h1 class="page-h1"><span class="ph-line"><span class="ph-inner">Choose Your</span></span><span class="ph-line"><span class="ph-inner"><em>Package</em></span></span></h1>
+    <p class="page-sub">Every service comes in three tiers — Starter, Standard and Premium. Pick the level of care that fits your property and budget. All packages include free estimates and full satisfaction guarantee.</p>
+  </div>
+</div>
+
+<section class="pkg-section" id="packages">
+  <div class="s-eyebrow reveal">All Services</div>
+  <h2 class="reveal s-title">Select a <em>Service</em></h2>
+  <div class="pkg-tabs" id="pkgTabs" role="tablist">
+    <button class="pkg-tab active" onclick="showPkg('lawn',this)" role="tab" aria-selected="true"><span>🌿 Lawn Care</span></button>
+    <button class="pkg-tab" onclick="showPkg('window',this)" role="tab" aria-selected="false"><span>🪟 Windows</span></button>
+    <button class="pkg-tab" onclick="showPkg('gutter',this)" role="tab" aria-selected="false"><span>🏠 Gutters</span></button>
+    <button class="pkg-tab" onclick="showPkg('pressure',this)" role="tab" aria-selected="false"><span>💦 Pressure Wash</span></button>
+    <button class="pkg-tab" onclick="showPkg('cleaning',this)" role="tab" aria-selected="false"><span>✨ Cleaning</span></button>
+    <button class="pkg-tab" onclick="showPkg('junk',this)" role="tab" aria-selected="false"><span>🚛 Junk Removal</span></button>
+    <button class="pkg-tab" onclick="showPkg('lights',this)" role="tab" aria-selected="false"><span>💡 Holiday Lights</span></button>
+    <button class="pkg-tab" onclick="showPkg('snow',this)" role="tab" aria-selected="false"><span>❄️ Snow Removal</span></button>
+  </div>
+
+  <div id="pkg-lawn" class="pkg-panel active"><div class="pkg-grid">
+    <div class="pkg-card"><div class="pkg-tier">Starter</div><h3>Basic Cut</h3><p class="pkg-desc">For homeowners who need the essentials kept tidy throughout the season.</p><ul><li>Bi-weekly mowing</li><li>Edge along walkways</li><li>Grass clipping cleanup</li><li class="no">Trimming around obstacles</li><li class="no">Fertilization</li><li class="no">Seasonal cleanup</li></ul><div class="pkg-price">Starting at <span>Custom Quote</span></div><a href="contact.html" class="pkg-cta" onclick="navTo(event,'contact.html')"><span>Get a Quote</span></a></div>
+    <div class="pkg-card featured"><div class="pkg-badge">Most Popular</div><div class="pkg-tier">Standard</div><h3>Full Lawn Care</h3><p class="pkg-desc">Everything your lawn needs to stay healthy and look great all season long.</p><ul><li>Weekly or bi-weekly mowing</li><li>Edging, trimming & blowout</li><li>Obstacle & bed trimming</li><li>Seasonal fertilization (2x)</li><li>Spring & fall cleanup</li><li class="no">Aeration & overseeding</li></ul><div class="pkg-price">Starting at <span>Custom Quote</span></div><a href="contact.html" class="pkg-cta" onclick="navTo(event,'contact.html')"><span>Get a Quote</span></a></div>
+    <div class="pkg-card"><div class="pkg-tier">Premium</div><h3>Lawn Pro</h3><p class="pkg-desc">Total lawn health management for homeowners who want a showstopper yard.</p><ul><li>Everything in Full Lawn</li><li>Aeration & overseeding</li><li>Weed control treatments</li><li>Fertilization (4x seasonal)</li><li>Mulching & bed maintenance</li><li>Priority scheduling</li></ul><div class="pkg-price">Starting at <span>Custom Quote</span></div><a href="contact.html" class="pkg-cta" onclick="navTo(event,'contact.html')"><span>Get a Quote</span></a></div>
+  </div></div>
+
+  <div id="pkg-window" class="pkg-panel"><div class="pkg-grid">
+    <div class="pkg-card"><div class="pkg-tier">Starter</div><h3>Exterior Only</h3><p class="pkg-desc">Quick exterior-only clean to boost curb appeal fast.</p><ul><li>Exterior window cleaning</li><li>Streak-free finish</li><li>Screen wipe-down</li><li class="no">Interior cleaning</li><li class="no">Frame & sill detail</li><li class="no">Track cleaning</li></ul><div class="pkg-price">Starting at <span>Custom Quote</span></div><a href="contact.html" class="pkg-cta" onclick="navTo(event,'contact.html')"><span>Get a Quote</span></a></div>
+    <div class="pkg-card featured"><div class="pkg-badge">Most Popular</div><div class="pkg-tier">Standard</div><h3>Inside & Out</h3><p class="pkg-desc">Complete interior and exterior — the full package for sparkling results.</p><ul><li>Interior & exterior clean</li><li>Streak-free professional finish</li><li>Screen removal & cleaning</li><li>Frame & sill wipe-down</li><li>Track cleaning</li><li class="no">Hard water stain removal</li></ul><div class="pkg-price">Starting at <span>Custom Quote</span></div><a href="contact.html" class="pkg-cta" onclick="navTo(event,'contact.html')"><span>Get a Quote</span></a></div>
+    <div class="pkg-card"><div class="pkg-tier">Premium</div><h3>Crystal Clear</h3><p class="pkg-desc">Deepest window clean — perfect for hard water, post-construction or move-in.</p><ul><li>Everything in Inside & Out</li><li>Hard water stain removal</li><li>Post-construction clean</li><li>Screen repair check</li><li>Sealant protection</li><li>Priority scheduling</li></ul><div class="pkg-price">Starting at <span>Custom Quote</span></div><a href="contact.html" class="pkg-cta" onclick="navTo(event,'contact.html')"><span>Get a Quote</span></a></div>
+  </div></div>
+
+  <div id="pkg-gutter" class="pkg-panel"><div class="pkg-grid">
+    <div class="pkg-card"><div class="pkg-tier">Starter</div><h3>Clean & Flush</h3><p class="pkg-desc">Essential gutter cleaning to remove debris and restore water flow.</p><ul><li>Full gutter debris removal</li><li>Downspout flush & check</li><li>Visual inspection</li><li class="no">Exterior brightening</li><li class="no">Minor repairs</li><li class="no">Gutter guard install</li></ul><div class="pkg-price">Starting at <span>Custom Quote</span></div><a href="contact.html" class="pkg-cta" onclick="navTo(event,'contact.html')"><span>Get a Quote</span></a></div>
+    <div class="pkg-card featured"><div class="pkg-badge">Most Popular</div><div class="pkg-tier">Standard</div><h3>Clean + Protect</h3><p class="pkg-desc">Cleaning plus guard installation — stop the clog cycle for good.</p><ul><li>Full gutter clean & flush</li><li>Exterior gutter brightening</li><li>Downspout check & clear</li><li>Basic gutter guard install</li><li>Written condition report</li><li class="no">Premium guard system</li></ul><div class="pkg-price">Starting at <span>Custom Quote</span></div><a href="contact.html" class="pkg-cta" onclick="navTo(event,'contact.html')"><span>Get a Quote</span></a></div>
+    <div class="pkg-card"><div class="pkg-tier">Premium</div><h3>Total Gutter System</h3><p class="pkg-desc">Complete health — cleaning, premium guards, repairs and annual service.</p><ul><li>Everything in Clean + Protect</li><li>Premium micro-mesh guards</li><li>Minor repair & re-sealing</li><li>Annual maintenance plan</li><li>Before & after report</li><li>Priority storm service</li></ul><div class="pkg-price">Starting at <span>Custom Quote</span></div><a href="contact.html" class="pkg-cta" onclick="navTo(event,'contact.html')"><span>Get a Quote</span></a></div>
+  </div></div>
+
+  <div id="pkg-pressure" class="pkg-panel"><div class="pkg-grid">
+    <div class="pkg-card"><div class="pkg-tier">Starter</div><h3>Driveway & Walk</h3><p class="pkg-desc">Targeted clean for your driveway and front walkway.</p><ul><li>Driveway pressure wash</li><li>Front walkway & steps</li><li>Garage apron</li><li class="no">Patio or deck</li><li class="no">Siding or fence</li><li class="no">Pre-treatment</li></ul><div class="pkg-price">Starting at <span>Custom Quote</span></div><a href="contact.html" class="pkg-cta" onclick="navTo(event,'contact.html')"><span>Get a Quote</span></a></div>
+    <div class="pkg-card featured"><div class="pkg-badge">Most Popular</div><div class="pkg-tier">Standard</div><h3>Full Exterior</h3><p class="pkg-desc">Complete exterior wash — transforms the entire look of your property in one visit.</p><ul><li>Driveway & all walkways</li><li>Patio, deck & steps</li><li>House siding wash</li><li>Fence wash</li><li>Detailing & pre-treatment</li><li class="no">Soft-wash upgrade</li></ul><div class="pkg-price">Starting at <span>Custom Quote</span></div><a href="contact.html" class="pkg-cta" onclick="navTo(event,'contact.html')"><span>Get a Quote</span></a></div>
+    <div class="pkg-card"><div class="pkg-tier">Premium</div><h3>Deep Clean Pro</h3><p class="pkg-desc">Most thorough — soft-wash siding, roof treatment and post-clean sealing.</p><ul><li>Everything in Full Exterior</li><li>Soft-wash siding treatment</li><li>Roof moss & algae treatment</li><li>Driveway sealant</li><li>Retaining wall clean</li><li>Before & after photos</li></ul><div class="pkg-price">Starting at <span>Custom Quote</span></div><a href="contact.html" class="pkg-cta" onclick="navTo(event,'contact.html')"><span>Get a Quote</span></a></div>
+  </div></div>
+
+  <div id="pkg-cleaning" class="pkg-panel"><div class="pkg-grid">
+    <div class="pkg-card"><div class="pkg-tier">Starter</div><h3>Regular Clean</h3><p class="pkg-desc">Recurring maintenance clean to keep your home fresh and tidy.</p><ul><li>Vacuuming & mopping</li><li>Kitchen surface wipe-down</li><li>Bathroom clean & sanitize</li><li>Dusting & general tidy</li><li class="no">Inside appliances</li><li class="no">Cabinet interiors</li></ul><div class="pkg-price">Starting at <span>Custom Quote</span></div><a href="contact.html" class="pkg-cta" onclick="navTo(event,'contact.html')"><span>Get a Quote</span></a></div>
+    <div class="pkg-card featured"><div class="pkg-badge">Most Popular</div><div class="pkg-tier">Standard</div><h3>Deep Clean</h3><p class="pkg-desc">Top-to-bottom clean — ideal for seasonal resets, move-in/out or first-time service.</p><ul><li>Everything in Regular Clean</li><li>Inside oven & microwave</li><li>Inside fridge clean</li><li>Baseboards & fixtures</li><li>Window sill & ledge</li><li class="no">Cabinet interior detail</li></ul><div class="pkg-price">Starting at <span>Custom Quote</span></div><a href="contact.html" class="pkg-cta" onclick="navTo(event,'contact.html')"><span>Get a Quote</span></a></div>
+    <div class="pkg-card"><div class="pkg-tier">Premium</div><h3>White Glove</h3><p class="pkg-desc">Most comprehensive — every surface, every corner, every detail.</p><ul><li>Everything in Deep Clean</li><li>Cabinet interior detail</li><li>Grout & tile scrubbing</li><li>Wall spot-cleaning</li><li>Garage & laundry area</li><li>Priority scheduling</li></ul><div class="pkg-price">Starting at <span>Custom Quote</span></div><a href="contact.html" class="pkg-cta" onclick="navTo(event,'contact.html')"><span>Get a Quote</span></a></div>
+  </div></div>
+
+  <div id="pkg-junk" class="pkg-panel"><div class="pkg-grid">
+    <div class="pkg-card"><div class="pkg-tier">Starter</div><h3>Small Load</h3><p class="pkg-desc">Clear a single room or a few bulky items fast.</p><ul><li>Up to ¼ truck load</li><li>Furniture & appliances</li><li>Responsible disposal</li><li class="no">Same-day availability</li><li class="no">Donation drop-off</li><li class="no">Construction debris</li></ul><div class="pkg-price">Starting at <span>Custom Quote</span></div><a href="contact.html" class="pkg-cta" onclick="navTo(event,'contact.html')"><span>Get a Quote</span></a></div>
+    <div class="pkg-card featured"><div class="pkg-badge">Most Popular</div><div class="pkg-tier">Standard</div><h3>Half Truck</h3><p class="pkg-desc">Great for garage cleanouts, estate clearing or renovation debris.</p><ul><li>Up to ½ truck load</li><li>All item types accepted</li><li>Same-day booking available</li><li>Donation drop-off included</li><li>Yard waste & debris</li><li class="no">Full property clearout</li></ul><div class="pkg-price">Starting at <span>Custom Quote</span></div><a href="contact.html" class="pkg-cta" onclick="navTo(event,'contact.html')"><span>Get a Quote</span></a></div>
+    <div class="pkg-card"><div class="pkg-tier">Premium</div><h3>Full Truck</h3><p class="pkg-desc">Full-property cleanout — landlords, estates, major renovations.</p><ul><li>Full truck load</li><li>All material types</li><li>Priority same-day service</li><li>Donation & recycling sorting</li><li>Construction debris</li><li>Multi-trip available</li></ul><div class="pkg-price">Starting at <span>Custom Quote</span></div><a href="contact.html" class="pkg-cta" onclick="navTo(event,'contact.html')"><span>Get a Quote</span></a></div>
+  </div></div>
+
+  <div id="pkg-lights" class="pkg-panel"><div class="pkg-grid">
+    <div class="pkg-card"><div class="pkg-tier">Starter</div><h3>Roofline Glow</h3><p class="pkg-desc">Classic roofline lighting with professional installation.</p><ul><li>Roofline light install</li><li>Professional-grade lights</li><li>Safe, secure fastening</li><li class="no">Trees & shrubs</li><li class="no">Custom design</li><li class="no">Storage</li></ul><div class="pkg-price">Starting at <span>Custom Quote</span></div><a href="contact.html" class="pkg-cta" onclick="navTo(event,'contact.html')"><span>Get a Quote</span></a></div>
+    <div class="pkg-card featured"><div class="pkg-badge">Most Popular</div><div class="pkg-tier">Standard</div><h3>Full Display</h3><p class="pkg-desc">Roofline plus trees and shrubs — a full festive look that stands out.</p><ul><li>Roofline & gable lighting</li><li>Tree & shrub wrapping</li><li>Pathway lights</li><li>Design consult</li><li>Post-season takedown</li><li class="no">Storage</li></ul><div class="pkg-price">Starting at <span>Custom Quote</span></div><a href="contact.html" class="pkg-cta" onclick="navTo(event,'contact.html')"><span>Get a Quote</span></a></div>
+    <div class="pkg-card"><div class="pkg-tier">Premium</div><h3>Grand Illumination</h3><p class="pkg-desc">The full show — custom design, full coverage, takedown and storage.</p><ul><li>Everything in Full Display</li><li>Custom lighting design</li><li>Animated & colour-changing</li><li>Takedown & storage</li><li>Annual re-install included</li><li>Priority scheduling</li></ul><div class="pkg-price">Starting at <span>Custom Quote</span></div><a href="contact.html" class="pkg-cta" onclick="navTo(event,'contact.html')"><span>Get a Quote</span></a></div>
+  </div></div>
+
+  <div id="pkg-snow" class="pkg-panel"><div class="pkg-grid">
+    <div class="pkg-card"><div class="pkg-tier">Starter</div><h3>On-Call Snow</h3><p class="pkg-desc">Call us when you need us — perfect for occasional snow events.</p><ul><li>Per-visit driveway clear</li><li>Front walkway shoveling</li><li>Basic salt application</li><li class="no">Seasonal contract</li><li class="no">Auto-dispatch</li><li class="no">Parking lot service</li></ul><div class="pkg-price">Starting at <span>Custom Quote</span></div><a href="contact.html" class="pkg-cta" onclick="navTo(event,'contact.html')"><span>Get a Quote</span></a></div>
+    <div class="pkg-card featured"><div class="pkg-badge">Most Popular</div><div class="pkg-tier">Standard</div><h3>Seasonal Plan</h3><p class="pkg-desc">Worry-free coverage — we monitor the forecast and show up automatically.</p><ul><li>Unlimited seasonal visits</li><li>Auto-dispatch on 2"+ snow</li><li>Driveway & walkways</li><li>Ice melt application</li><li>Priority response time</li><li class="no">Commercial / parking lot</li></ul><div class="pkg-price">Starting at <span>Custom Quote</span></div><a href="contact.html" class="pkg-cta" onclick="navTo(event,'contact.html')"><span>Get a Quote</span></a></div>
+    <div class="pkg-card"><div class="pkg-tier">Premium</div><h3>Commercial Snow</h3><p class="pkg-desc">Full snow management for commercial properties and parking lots.</p><ul><li>Everything in Seasonal Plan</li><li>Parking lot plowing</li><li>Loading dock service</li><li>Salt truck treatment</li><li>Liability documentation</li><li>24/7 storm response</li></ul><div class="pkg-price">Starting at <span>Custom Quote</span></div><a href="contact.html" class="pkg-cta" onclick="navTo(event,'contact.html')"><span>Get a Quote</span></a></div>
+  </div></div>
+</section>
+
+<section class="guarantee-section"><div class="guarantee-inner"><div class="g-emblem reveal-s">🏆</div><h2 class="reveal">100% <em>Satisfaction</em><br>Guaranteed</h2><p class="reveal">Every package comes with our full satisfaction guarantee. Not happy? We come back and make it right — completely free of charge.</p><div class="gp-grid reveal"><span class="gp-pill">✓ Free redo if not satisfied</span><span class="gp-pill">✓ Fully insured</span><span class="gp-pill">✓ Transparent pricing</span><span class="gp-pill">✓ Free estimates always</span></div><a href="contact.html" class="mag-btn mag-btn-gold" onclick="navTo(event,'contact.html')" data-magnetic style="margin:0 auto"><span>Get a Free Quote</span></a></div></section>
+
+<section class="cta-band"><div class="cta-band-inner"><h2 class="reveal">Not Sure Which <em>Package?</em></h2><p class="reveal">Contact us and we'll recommend the right tier for your property and budget.</p><div class="cta-btns reveal"><a href="contact.html" class="mag-btn mag-btn-gold" onclick="navTo(event,'contact.html')" data-magnetic><span>Get a Free Quote</span></a><a href="services.html" class="mag-btn mag-btn-outline" onclick="navTo(event,'services.html')">Explore All Services</a></div></div></section>
+</main>
+
+<div class="sticky-call"><a href="tel:+12362056464"><div class="pulse-dot"></div><span>📞 (236) 205-6464</span></a></div>
+<footer><div class="footer-inner"><div class="footer-logo"><img src="logo.png" alt="OSM Pro" height="42" width="auto"></div><div class="footer-nav-group"><h4>Navigate</h4><div class="footer-links"><a href="index.html" onclick="navTo(event,'index.html')">Home</a><a href="services.html" onclick="navTo(event,'services.html')">Services</a><a href="packages.html" onclick="navTo(event,'packages.html')">Packages</a><a href="about.html" onclick="navTo(event,'about.html')">About</a><a href="contact.html" onclick="navTo(event,'contact.html')">Contact</a></div></div><div class="footer-about">OSM Pro – Locally owned in <strong>Guelph, ON</strong>. Serving Guelph, Cambridge, Kitchener, Waterloo, Milton, Burlington & Hamilton.</div><div class="footer-social"><a href="https://www.instagram.com/osmpro.ca" target="_blank" rel="noopener">📷</a><a href="https://www.tiktok.com/@osmpro.ca" target="_blank" rel="noopener">🎵</a><a href="tel:+12362056464">📞</a><a href="mailto:inquiry@osmpro.ca">📧</a></div></div><div class="footer-copy">© 2026 OSM Pro – One Stop Maintenance Pro. All rights reserved.</div></footer>
+<script>
+/* PAGE TRANSITIONS */
+function navTo(e,url){
+  e.preventDefault();
+  var dest=url||(e.currentTarget&&e.currentTarget.getAttribute('href'));
+  if(!dest)return;
+  if(dest.startsWith('#')){
+    var el=document.querySelector(dest);
+    if(el)el.scrollIntoView({behavior:'smooth'});
+    return;
+  }
+  var t=document.getElementById('page-transition');
+  if(t){t.classList.remove('leaving');t.classList.add('entering');}
+  setTimeout(function(){window.location.href=dest;},600);
+}
+window.addEventListener('pageshow',function(){
+  var t=document.getElementById('page-transition');
+  if(!t)return;
+  t.style.animation='none';
+  t.style.clipPath='inset(100% 0 0 0)';
+  void t.offsetWidth;
+  t.style.animation='';
+  t.classList.remove('entering');
+  t.classList.add('leaving');
+});
+/* CURSOR */
+
+/* MAGNETIC */
+document.querySelectorAll('[data-magnetic]').forEach(btn=>{btn.addEventListener('mousemove',e=>{const r=btn.getBoundingClientRect(),x=e.clientX-r.left-r.width/2,y=e.clientY-r.top-r.height/2;btn.style.transform=`translate(${x*.3}px,${y*.3}px)`;});btn.addEventListener('mouseleave',()=>btn.style.transform='');});
+/* NAV */
+window.addEventListener('scroll',function(){
+  var nav=document.getElementById('mainNav');
+  if(!nav)return;
+  var scrolled=window.scrollY>60;
+  nav.classList.toggle('scrolled',scrolled);
+  nav.style.top=scrolled?'0':'37px';
+},{passive:true});
+/* MOBILE MENU */
+function toggleMobile(){const m=document.getElementById('mobileMenu'),b=document.getElementById('hamburger'),o=m.classList.toggle('open');b.classList.toggle('open',o);document.body.style.overflow=o?'hidden':'';}
+function closeMobile(){document.getElementById('mobileMenu').classList.remove('open');document.getElementById('hamburger').classList.remove('open');document.body.style.overflow='';}
+/* REVEAL */
+const obs=new IntersectionObserver(e=>e.forEach(en=>{if(en.isIntersecting)en.target.classList.add('visible')}),{threshold:.08,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal,.reveal-l,.reveal-r,.reveal-s').forEach(el=>obs.observe(el));
+/* FAQ */
+function toggleFaq(btn){const item=btn.parentElement,open=item.classList.toggle('open');btn.setAttribute('aria-expanded',open);}
+/* PARALLAX */
+const pHero=document.querySelector('.page-hero-bg');if(pHero)window.addEventListener('scroll',()=>pHero.style.transform=`translateY(${scrollY*.2}px)`,{passive:true});
+/* CARD GLOW */
+function cardGlow(el,e){const r=el.getBoundingClientRect();el.style.setProperty('--mx',((e.clientX-r.left)/r.width*100)+'%');el.style.setProperty('--my',((e.clientY-r.top)/r.height*100)+'%');}
+function showPkg(id,btn){document.querySelectorAll('.pkg-panel').forEach(p=>p.classList.remove('active'));document.querySelectorAll('.pkg-tab').forEach(t=>{t.classList.remove('active');t.setAttribute('aria-selected','false')});document.getElementById('pkg-'+id).classList.add('active');btn.classList.add('active');btn.setAttribute('aria-selected','true');}
+const h=location.hash.replace('#','');if(h){const map={lawn:'lawn',window:'window',gutter:'gutter',pressure:'pressure',cleaning:'cleaning',junk:'junk',lights:'lights',snow:'snow'};if(map[h]){const btn=document.querySelectorAll('.pkg-tab')[Object.keys(map).indexOf(h)];if(btn)showPkg(h,btn);}}
+</script>
+</body></html>
