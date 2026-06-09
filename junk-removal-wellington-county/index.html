@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Junk Removal in Wellington County, ON | OSM Pro</title>
+  <meta name="description" content="Professional junk removal in Wellington County, ON. Clear out the clutter — fast. Fully insured, locally owned, free quotes. Call OSM Pro today.">
+  <link rel="canonical" href="https://osmpro.ca/junk-removal-wellington-county">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Junk Removal in Wellington County, ON | OSM Pro">
+  <meta property="og:description" content="Professional junk removal in Wellington County, ON. Clear out the clutter — fast. Fully insured, locally owned, free quotes. Call OSM Pro today.">
+  <meta property="og:url" content="https://osmpro.ca/junk-removal-wellington-county">
+  <link rel="icon" href="/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+
+  <style>
+    /* ── Reset & Base ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', system-ui, sans-serif; color: #1a1a2e; background: #fff; line-height: 1.6; }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+
+    /* ── Promo Banner ── */
+    .promo-banner { background: #16213e; color: #fff; text-align: center; padding: 10px 20px; font-size: 0.85rem; }
+    .promo-banner a { color: #4fc3f7; font-weight: 600; }
+
+    /* ── Navbar ── */
+    .navbar { position: sticky; top: 0; z-index: 100; background: #fff; border-bottom: 1px solid #eee; }
+    .nav-container { max-width: 1200px; margin: 0 auto; padding: 0 24px; height: 64px; display: flex; align-items: center; gap: 32px; }
+    .nav-logo img { display: block; }
+    .nav-links { display: flex; gap: 28px; list-style: none; margin-left: auto; }
+    .nav-links a { font-size: 0.9rem; font-weight: 500; color: #444; transition: color 0.2s; }
+    .nav-links a:hover { color: #1a73e8; }
+    .nav-cta { color: #1a73e8 !important; font-weight: 700 !important; }
+    .nav-actions { display: flex; align-items: center; gap: 12px; margin-left: 24px; }
+    .nav-phone { font-size: 0.85rem; font-weight: 600; color: #333; white-space: nowrap; }
+    .btn { display: inline-flex; align-items: center; gap: 6px; padding: 10px 22px; border-radius: 6px; font-weight: 600; font-size: 0.9rem; cursor: pointer; transition: all 0.2s; border: none; }
+    .btn-primary { background: #1a73e8; color: #fff; }
+    .btn-primary:hover { background: #1557b0; }
+    .btn-outline { background: transparent; color: #1a73e8; border: 2px solid #1a73e8; }
+    .btn-outline:hover { background: #1a73e8; color: #fff; }
+    .btn-sm { padding: 7px 16px; font-size: 0.82rem; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
+    .hamburger span { display: block; width: 22px; height: 2px; background: #333; border-radius: 2px; transition: all 0.3s; }
+    .mobile-menu { display: none; background: #fff; border-top: 1px solid #eee; }
+    .mobile-menu ul { list-style: none; padding: 16px 24px; display: flex; flex-direction: column; gap: 16px; }
+    .mobile-menu a { font-size: 1rem; font-weight: 500; color: #333; }
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .nav-phone { display: none; }
+      .btn-sm { display: none; }
+      .hamburger { display: flex; }
+      .mobile-menu.open { display: block; }
+    }
+
+    /* ── Hero ── */
+    .hero { background: linear-gradient(135deg, #16213e 0%, #0f3460 100%); color: #fff; padding: 80px 24px 72px; text-align: center; }
+    .hero-badge { display: inline-block; background: rgba(79,195,247,0.15); color: #4fc3f7; border: 1px solid rgba(79,195,247,0.4); border-radius: 20px; padding: 4px 14px; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 20px; }
+    .hero h1 { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 800; line-height: 1.15; margin-bottom: 20px; }
+    .hero h1 em { font-style: normal; color: #4fc3f7; }
+    .hero p { font-size: 1.1rem; color: rgba(255,255,255,0.8); max-width: 640px; margin: 0 auto 32px; }
+    .hero-ctas { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .hero-stats { display: flex; gap: 32px; justify-content: center; flex-wrap: wrap; margin-top: 48px; padding-top: 40px; border-top: 1px solid rgba(255,255,255,0.12); }
+    .hero-stat strong { display: block; font-size: 1.8rem; font-weight: 800; color: #4fc3f7; }
+    .hero-stat span { font-size: 0.8rem; color: rgba(255,255,255,0.65); }
+
+    /* ── Sections ── */
+    .section { padding: 72px 24px; }
+    .section-inner { max-width: 1100px; margin: 0 auto; }
+    .section-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #1a73e8; margin-bottom: 10px; }
+    .section-title { font-size: clamp(1.6rem, 3.5vw, 2.4rem); font-weight: 800; line-height: 1.2; margin-bottom: 16px; }
+    .section-title em { font-style: normal; color: #1a73e8; }
+    .section-sub { color: #666; font-size: 1.05rem; max-width: 600px; margin-bottom: 40px; }
+    .bg-light { background: #f8fafc; }
+
+    /* ── Service Detail Card ── */
+    .service-card { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+    .service-card.reverse { direction: rtl; }
+    .service-card.reverse > * { direction: ltr; }
+    .service-card img { width: 100%; border-radius: 12px; object-fit: cover; aspect-ratio: 4/3; box-shadow: 0 8px 32px rgba(0,0,0,0.12); }
+    .service-features { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 16px; margin: 20px 0 28px; }
+    .service-features li { list-style: none; padding-left: 20px; position: relative; font-size: 0.9rem; color: #444; }
+    .service-features li::before { content: "✓"; position: absolute; left: 0; color: #1a73e8; font-weight: 700; }
+    .service-ctas { display: flex; gap: 12px; flex-wrap: wrap; }
+    @media (max-width: 768px) {
+      .service-card { grid-template-columns: 1fr; }
+      .service-card.reverse { direction: ltr; }
+    }
+
+    /* ── Other Services Grid ── */
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; }
+    .service-tile { background: #fff; border: 1px solid #e5e7eb; border-radius: 10px; padding: 20px; transition: all 0.2s; }
+    .service-tile:hover { border-color: #1a73e8; box-shadow: 0 4px 16px rgba(26,115,232,0.12); transform: translateY(-2px); }
+    .service-tile h3 { font-size: 0.95rem; font-weight: 700; margin-bottom: 4px; }
+    .service-tile p { font-size: 0.82rem; color: #666; margin-bottom: 12px; }
+    .service-tile a { font-size: 0.82rem; color: #1a73e8; font-weight: 600; }
+
+    /* ── Why Us ── */
+    .why-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 24px; }
+    .why-card { background: #fff; border: 1px solid #e5e7eb; border-radius: 12px; padding: 28px; }
+    .why-card .icon { font-size: 1.8rem; margin-bottom: 12px; }
+    .why-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 8px; }
+    .why-card p { font-size: 0.88rem; color: #555; }
+
+    /* ── Testimonial ── */
+    .testimonial-band { background: linear-gradient(135deg, #16213e, #0f3460); color: #fff; padding: 64px 24px; text-align: center; }
+    .testimonial-band blockquote { font-size: clamp(1.1rem, 2.5vw, 1.5rem); font-style: italic; max-width: 700px; margin: 0 auto 20px; line-height: 1.6; }
+    .testimonial-band cite { font-size: 0.9rem; color: #4fc3f7; font-style: normal; }
+    .stars { color: #f59e0b; font-size: 1.2rem; margin-bottom: 16px; }
+
+    /* ── FAQ ── */
+    .faq-list { display: flex; flex-direction: column; gap: 12px; max-width: 760px; }
+    .faq-item { border: 1px solid #e5e7eb; border-radius: 10px; overflow: hidden; }
+    .faq-item summary { padding: 18px 20px; font-weight: 600; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; font-size: 0.95rem; }
+    .faq-item summary::after { content: "+"; font-size: 1.2rem; color: #1a73e8; }
+    .faq-item[open] summary::after { content: "−"; }
+    .faq-item p { padding: 0 20px 18px; color: #555; font-size: 0.9rem; }
+
+    /* ── CTA Band ── */
+    .cta-band { background: #1a73e8; color: #fff; padding: 64px 24px; text-align: center; }
+    .cta-band h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 800; margin-bottom: 12px; }
+    .cta-band h2 em { font-style: normal; color: #a8d4ff; }
+    .cta-band p { color: rgba(255,255,255,0.85); margin-bottom: 28px; }
+    .cta-band .btn-primary { background: #fff; color: #1a73e8; }
+    .cta-band .btn-primary:hover { background: #f0f7ff; }
+    .cta-band .btn-outline { border-color: rgba(255,255,255,0.6); color: #fff; }
+    .cta-band .btn-outline:hover { background: rgba(255,255,255,0.15); }
+    .cta-ctas { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+
+    /* ── Area chips ── */
+    .area-chips { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+    .chip { background: #f0f7ff; color: #1a73e8; border: 1px solid #bfdbfe; border-radius: 20px; padding: 4px 14px; font-size: 0.82rem; font-weight: 600; }
+    .chip.active { background: #1a73e8; color: #fff; border-color: #1a73e8; }
+
+    /* ── Footer ── */
+    .footer { background: #16213e; color: #fff; padding: 56px 24px 0; }
+    .footer-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr auto; gap: 48px; padding-bottom: 48px; }
+    .footer-brand img { margin-bottom: 12px; }
+    .footer-brand p { font-size: 0.85rem; color: rgba(255,255,255,0.65); line-height: 1.7; }
+    .footer-social { display: flex; gap: 12px; margin-top: 16px; }
+    .footer-social a { font-size: 1.2rem; }
+    .footer-nav { display: flex; flex-direction: column; gap: 10px; }
+    .footer-nav h4 { font-size: 0.82rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 4px; }
+    .footer-nav a { font-size: 0.88rem; color: rgba(255,255,255,0.7); transition: color 0.2s; }
+    .footer-nav a:hover { color: #fff; }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding: 20px 0; max-width: 1100px; margin: 0 auto; }
+    .footer-bottom p { font-size: 0.78rem; color: rgba(255,255,255,0.4); }
+    @media (max-width: 640px) { .footer-inner { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <div class="promo-banner">🎉 New Business Special: 10% off your first service — <a href="/contact.html">Book online today!</a></div>  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="/index.html" class="nav-logo">
+        <img src="/logo.png" alt="OSM Pro" height="36">
+      </a>
+      <ul class="nav-links">
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/services.html">Services</a></li>
+        <li><a href="/packages.html">Packages</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/contact.html" class="nav-cta">Free Quote</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="tel:+12362056464" class="nav-phone">📞 (236) 205-6464</a>
+        <a href="/contact.html" class="btn btn-primary btn-sm">Free Quote</a>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobile-menu">
+      <ul>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/services.html">Services</a></li>
+        <li><a href="/packages.html">Packages</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/contact.html">Free Quote</a></li>
+      </ul>
+    </div>
+  </nav>
+  <section class="hero">
+    <div>
+      <span class="hero-badge">Same-Day Available · Wellington County, ON</span>
+      <h1>Junk Removal in<br><em>Wellington County, Ontario</em></h1>
+      <p>We haul away furniture, appliances, yard waste, construction debris and more. Same-day availability in most areas. We sort, donate, and recycle wherever possible. Serving Wellington County and surrounding areas — fully insured, locally owned.</p>
+      <div class="hero-ctas">
+        <a href="#contact" class="btn btn-primary">Get a Free Quote →</a>
+        <a href="tel:+12362056464" class="btn btn-outline">📞 (236) 205-6464</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat"><strong>5★</strong><span>Rated</span></div>
+        <div class="hero-stat"><strong>24h</strong><span>Response</span></div>
+        <div class="hero-stat"><strong>100%</strong><span>Guaranteed</span></div>
+        <div class="hero-stat"><strong>Insured</strong><span>Every Job</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-inner">
+      <div class="service-card">
+        <img src="/IMG 7774.png" alt="Junk Removal Wellington County Ontario" loading="lazy">
+        <div>
+          <p class="section-label">Same-Day Available</p>
+          <h2 class="section-title">Junk Removal <em>in Wellington County</em></h2>
+          <p style="color:#555;margin-bottom:8px;">We haul away furniture, appliances, yard waste, construction debris and more. Same-day availability in most areas. We sort, donate, and recycle wherever possible.</p>
+          <p style="color:#555;margin-bottom:16px;font-size:0.9rem;">We serve Wellington County including Fergus, Elora, and Rockwood. Call to confirm availability in your area.</p>
+          <ul class="service-features">
+          <li>Furniture & appliances</li>
+          <li>Yard waste & debris</li>
+          <li>Construction material</li>
+          <li>Small to full truck loads</li>
+          <li>Same-day booking</li>
+          <li>Estate & garage cleanouts</li>
+          </ul>
+          <div class="service-ctas">
+            <a href="#contact" class="btn btn-primary">Get a Free Quote</a>
+            <a href="/packages.html#junk-removal" class="btn btn-outline">View Packages</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-light">
+    <div class="section-inner">
+      <p class="section-label">Service Area</p>
+      <h2 class="section-title">Junk Removal Across <em>Every City</em></h2>
+      <p class="section-sub">We bring the same quality junk removal to every community we serve.</p>
+      <div class="area-chips">
+              <a href="/junk-removal-guelph" class="chip">Guelph</a>
+      <a href="/junk-removal-cambridge" class="chip">Cambridge</a>
+      <a href="/junk-removal-kitchener" class="chip">Kitchener</a>
+      <a href="/junk-removal-waterloo" class="chip">Waterloo</a>
+      <a href="/junk-removal-milton" class="chip">Milton</a>
+      <a href="/junk-removal-burlington" class="chip">Burlington</a>
+      <a href="/junk-removal-hamilton" class="chip">Hamilton</a>
+      <a href="/junk-removal-wellington-county" class="chip  active">Wellington County</a>
+      <a href="/junk-removal-waterloo-region" class="chip">Waterloo Region</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-inner">
+      <p class="section-label">Why OSM Pro in Wellington County</p>
+      <h2 class="section-title">Why <em>We're Different</em></h2>
+      <div class="why-grid">
+        <div class="why-card"><div class="icon">🛡️</div><h3>Fully Insured</h3><p>Complete liability coverage on every Wellington County job.</p></div>
+        <div class="why-card"><div class="icon">🏆</div><h3>100% Guaranteed</h3><p>Not satisfied? We come back and fix it free — every time.</p></div>
+        <div class="why-card"><div class="icon">⚡</div><h3>Fast Scheduling</h3><p>We book within 24–72 hours across all service areas.</p></div>
+        <div class="why-card"><div class="icon">🌿</div><h3>Locally Owned</h3><p>Based in Guelph — we genuinely care about the communities we serve.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonial-band">
+    <div class="stars">★★★★★</div>
+    <blockquote>"Booked OSM Pro for junk removal and they exceeded every expectation. Fast, professional, and the results were outstanding."</blockquote>
+    <cite>— Happy client, Wellington County ON</cite>
+  </section>
+
+  <section class="section bg-light">
+    <div class="section-inner">
+      <p class="section-label">FAQ</p>
+      <h2 class="section-title">Questions About <em>Junk Removal in Wellington County</em></h2>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>What items do you not take?</summary>
+          <p>We can't take hazardous materials (paint, chemicals, propane tanks). Everything else — furniture, appliances, yard waste, renovation debris — we'll haul away responsibly.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Do you serve all of Wellington County?</summary>
+          <p>Yes — we cover Fergus, Elora, Erin, Palmerston, Mount Forest, Rockwood and the wider Wellington County area. <a href="/contact.html" style="color:#1a73e8;">Contact us</a> to confirm your address.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Are you insured for work in Wellington County?</summary>
+          <p>Absolutely. OSM Pro carries full liability insurance on every job in every city — Wellington County included.</p>
+        </details>
+        <details class="faq-item">
+          <summary>How do I get a junk removal quote in Wellington County?</summary>
+          <p>Fill out the form below or call <a href="tel:+12362056464" style="color:#1a73e8;">(236) 205-6464</a>. We respond within 24 hours with a free, no-obligation estimate.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+  <section class="section bg-light" id="contact">
+    <div class="section-inner" style="max-width:700px;">
+      <p class="section-label">Free Quote</p>
+      <h2 class="section-title">Get Your <em>Free Estimate</em></h2>
+      <p class="section-sub">No obligation. We respond within 24 hours — usually same day.</p>
+      <form name="quote" method="POST" action="/contact.html" style="display:flex;flex-direction:column;gap:14px;">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
+          <input type="text" name="first" placeholder="First Name" required style="padding:12px 14px;border:1px solid #ddd;border-radius:8px;font-size:0.95rem;">
+          <input type="text" name="last" placeholder="Last Name" required style="padding:12px 14px;border:1px solid #ddd;border-radius:8px;font-size:0.95rem;">
+        </div>
+        <input type="tel" name="phone" placeholder="Phone" style="padding:12px 14px;border:1px solid #ddd;border-radius:8px;font-size:0.95rem;">
+        <input type="email" name="email" placeholder="Email" required style="padding:12px 14px;border:1px solid #ddd;border-radius:8px;font-size:0.95rem;">
+        <input type="text" name="city" placeholder="City / Address" value="Wellington County" style="padding:12px 14px;border:1px solid #ddd;border-radius:8px;font-size:0.95rem;">
+        <select name="service" style="padding:12px 14px;border:1px solid #ddd;border-radius:8px;font-size:0.95rem;background:#fff;">
+          <option value="">Select a service...</option>
+      <option value="Lawn Care">Lawn Care</option>
+      <option value="Pressure Washing">Pressure Washing</option>
+      <option value="Window Cleaning">Window Cleaning</option>
+      <option value="Gutter Cleaning">Gutter Cleaning</option>
+      <option value="Snow Removal">Snow Removal</option>
+      <option value="Junk Removal" selected>Junk Removal</option>
+      <option value="Holiday Lights">Holiday Lights</option>
+      <option value="Cleaning Services">Cleaning Services</option>
+          <option value="Multiple Services / Bundle">Multiple Services / Bundle</option>
+          <option value="Other">Other / Not Sure</option>
+        </select>
+        <textarea name="message" rows="4" placeholder="Message (optional)" style="padding:12px 14px;border:1px solid #ddd;border-radius:8px;font-size:0.95rem;resize:vertical;"></textarea>
+        <button type="submit" class="btn btn-primary" style="align-self:flex-start;font-size:1rem;padding:14px 28px;">Send My Free Quote →</button>
+      </form>
+    </div>
+  </section>
+  <section class="section bg-light">
+    <div class="section-inner">
+      <p class="section-label">More in Wellington County</p>
+      <h2 class="section-title">More <em>Services</em> in Wellington County</h2>
+      <div class="services-grid">
+      <a href="/lawn-care-wellington-county" class="service-tile"><h3>Lawn Care</h3><p>A lush, healthy lawn — without lifting a finger.</p><span>Learn more →</span></a>
+      <a href="/pressure-washing-wellington-county" class="service-tile"><h3>Pressure Washing</h3><p>Years of grime gone in a single visit.</p><span>Learn more →</span></a>
+      <a href="/window-cleaning-wellington-county" class="service-tile"><h3>Window Cleaning</h3><p>Crystal-clear windows that transform your home.</p><span>Learn more →</span></a>
+      <a href="/gutter-cleaning-wellington-county" class="service-tile"><h3>Gutter Cleaning</h3><p>Protect your home before damage starts.</p><span>Learn more →</span></a>
+      <a href="/snow-removal-wellington-county" class="service-tile"><h3>Snow Removal</h3><p>Never shovel again. We've got it covered.</p><span>Learn more →</span></a>
+      <a href="/holiday-lights-wellington-county" class="service-tile"><h3>Holiday Lights</h3><p>Make your home the star of the street.</p><span>Learn more →</span></a>
+      <a href="/cleaning-services-wellington-county" class="service-tile"><h3>Cleaning Services</h3><p>Spotless results, every single visit.</p><span>Learn more →</span></a>
+      </div>
+    </div>
+  </section>
+
+  <div class="cta-band">
+    <div style="max-width:700px;margin:0 auto;">
+      <h2>Junk Removal in <em>Wellington County</em> — Get Your Free Quote</h2>
+      <p>Fully insured. Locally owned. 100% satisfaction guaranteed.</p>
+      <div class="cta-ctas">
+        <a href="#contact" class="btn btn-primary">Get Your Free Quote →</a>
+        <a href="tel:+12362056464" class="btn btn-outline">📞 (236) 205-6464</a>
+      </div>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="/logo.png" alt="OSM Pro" height="40">
+        <p>OSM Pro – Locally owned in <strong>Guelph, ON</strong>.<br>Serving Guelph, Cambridge, Kitchener, Waterloo, Milton, Burlington &amp; Hamilton.</p>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/osmpro.ca" title="Instagram">📷</a>
+          <a href="https://www.tiktok.com/@osmpro.ca" title="TikTok">🎵</a>
+          <a href="tel:+12362056464" title="Call">📞</a>
+          <a href="mailto:inquiry@osmpro.ca" title="Email">📧</a>
+        </div>
+      </div>
+      <div class="footer-nav">
+        <h4>Navigate</h4>
+        <a href="/index.html">Home</a>
+        <a href="/services.html">Services</a>
+        <a href="/packages.html">Packages</a>
+        <a href="/about.html">About</a>
+        <a href="/contact.html">Contact</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 OSM Pro – One Stop Maintenance Pro. All rights reserved. | Proudly serving Guelph &amp; surrounding areas.</p>
+    </div>
+  </footer>
+
+  <script>
+    const ham = document.getElementById('hamburger');
+    const menu = document.getElementById('mobile-menu');
+    if (ham) ham.addEventListener('click', () => menu.classList.toggle('open'));
+  </script>
+</body>
+</html>
