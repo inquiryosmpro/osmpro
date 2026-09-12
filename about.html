@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="immersive_shared.css">
+<link rel="stylesheet" href="immersive_main.css">
 <style>
 /* STORY */
 .story-section{padding:120px 5%;background:var(--ink)}
@@ -17,20 +17,20 @@
 .story-img{position:relative;height:540px;overflow:hidden}
 .story-img img{width:100%;height:100%;object-fit:cover;filter:brightness(.8) saturate(.7);transition:transform .8s var(--ease-out-expo)}
 .story-img:hover img{transform:scale(1.04)}
-.story-img-accent{position:absolute;bottom:-16px;right:-16px;width:55%;height:55%;border:1px solid rgba(200,145,42,.2);pointer-events:none;z-index:-1}
-.story-text h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(3rem,5vw,5rem);line-height:.88;letter-spacing:-1px;color:var(--white);margin-bottom:1.5rem}
+.story-img-accent{position:absolute;bottom:-16px;right:-16px;width:55%;height:55%;border:1px solid rgba(14,123,194,.2);pointer-events:none;z-index:-1}
+.story-text h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(3rem,5vw,5rem);line-height:.88;letter-spacing:-1px;color:var(--cream);margin-bottom:1.5rem}
 .story-text h2 em{color:var(--gold-lit);font-style:normal}
-.story-text p{font-size:.93rem;color:rgba(240,237,230,.5);line-height:1.9;margin-bottom:1.25rem}
-.story-text p strong{color:rgba(240,237,230,.85)}
+.story-text p{font-size:.93rem;color:rgba(15,44,71,.6);line-height:1.9;margin-bottom:1.25rem}
+.story-text p strong{color:rgba(15,44,71,.85)}
 .story-text a{color:var(--gold-lit)}
 /* STATS BAR */
 .stats-bar{background:var(--ink2);border-top:1px solid rgba(255,255,255,.04);border-bottom:1px solid rgba(255,255,255,.04);display:flex;flex-wrap:wrap;justify-content:center}
 .stat-box{padding:3rem 3.5rem;text-align:center;border-right:1px solid rgba(255,255,255,.04);flex:1;min-width:150px;position:relative;overflow:hidden;transition:background .3s}
 .stat-box:last-child{border-right:none}
-.stat-box::before{content:'';position:absolute;bottom:0;left:0;right:0;height:0;background:rgba(200,145,42,.06);transition:height .4s var(--ease-out-expo)}
+.stat-box::before{content:'';position:absolute;bottom:0;left:0;right:0;height:0;background:rgba(14,123,194,.06);transition:height .4s var(--ease-out-expo)}
 .stat-box:hover::before{height:100%}
 .stat-num{font-family:'Bebas Neue',sans-serif;font-size:4rem;color:var(--gold-lit);line-height:1;display:block;position:relative}
-.stat-lbl{font-size:.6rem;letter-spacing:3px;text-transform:uppercase;color:rgba(240,237,230,.25);margin-top:6px;display:block;position:relative}
+.stat-lbl{font-size:.6rem;letter-spacing:3px;text-transform:uppercase;color:rgba(15,44,71,.4);margin-top:6px;display:block;position:relative}
 /* MISSION */
 .mission-section{padding:120px 5%;background:var(--forest);text-align:center;position:relative;overflow:hidden}
 .mission-section::before{content:'';position:absolute;inset:0;background-image:repeating-linear-gradient(0deg,transparent,transparent 80px,rgba(255,255,255,.012) 80px,rgba(255,255,255,.012) 81px),repeating-linear-gradient(90deg,transparent,transparent 80px,rgba(255,255,255,.012) 80px,rgba(255,255,255,.012) 81px)}
@@ -40,14 +40,14 @@
 .mission-attr{font-size:.65rem;letter-spacing:4px;text-transform:uppercase;color:rgba(240,237,230,.3)}
 /* VALUES */
 .values-section{padding:120px 5%;background:var(--charcoal)}
-.values-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:4rem;background:rgba(255,255,255,.04)}
+.values-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:4rem;background:rgba(15,44,71,.06)}
 .val-card{background:var(--ink2);padding:2.5rem 2rem;position:relative;overflow:hidden;transition:background .4s var(--ease-out-expo)}
 .val-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);transform:scaleX(0);transition:transform .5s var(--ease-out-expo)}
 .val-card:hover::after{transform:scaleX(1)}
-.val-card:hover{background:rgba(22,28,22,.9)}
+.val-card:hover{background:rgba(220,237,247,.9)}
 .val-icon{font-size:2rem;display:block;margin-bottom:1.25rem}
-.val-card h3{font-family:'Bebas Neue',sans-serif;font-size:1.8rem;letter-spacing:.5px;color:var(--white);margin-bottom:.75rem}
-.val-card p{font-size:.87rem;color:rgba(240,237,230,.45);line-height:1.8}
+.val-card h3{font-family:'Bebas Neue',sans-serif;font-size:1.8rem;letter-spacing:.5px;color:var(--cream);margin-bottom:.75rem}
+.val-card p{font-size:.87rem;color:rgba(15,44,71,.55);line-height:1.8}
 /* DIFFERENCE */
 .diff-section{padding:120px 5%;background:var(--ink2)}
 .diff-inner{display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center;max-width:1200px;margin:0 auto}
@@ -57,12 +57,12 @@
 .diff-list{display:flex;flex-direction:column;gap:0;margin-top:2rem}
 .diff-item{display:flex;gap:1.5rem;padding:1.5rem 0;border-bottom:1px solid rgba(255,255,255,.05);position:relative;overflow:hidden;transition:padding-left .4s var(--ease-out-expo)}
 .diff-item:first-child{border-top:1px solid rgba(255,255,255,.05)}
-.diff-item::before{content:'';position:absolute;left:0;top:0;bottom:0;width:0;background:rgba(200,145,42,.04);transition:width .5s var(--ease-out-expo)}
+.diff-item::before{content:'';position:absolute;left:0;top:0;bottom:0;width:0;background:rgba(14,123,194,.04);transition:width .5s var(--ease-out-expo)}
 .diff-item:hover::before{width:100%}
 .diff-item:hover{padding-left:14px}
 .diff-num{font-size:.62rem;letter-spacing:2px;color:var(--gold);flex-shrink:0;padding-top:4px;font-weight:500}
-.diff-item h4{font-size:.95rem;font-weight:500;color:var(--white);margin-bottom:5px;letter-spacing:.3px}
-.diff-item p{font-size:.85rem;color:rgba(240,237,230,.4);line-height:1.75}
+.diff-item h4{font-size:.95rem;font-weight:500;color:var(--cream);margin-bottom:5px;letter-spacing:.3px}
+.diff-item p{font-size:.85rem;color:rgba(15,44,71,.5);line-height:1.75}
 .diff-icon{position:absolute;right:0;top:50%;transform:translateY(-50%);font-size:1.4rem;opacity:0;transition:opacity .3s,right .4s var(--ease-out-expo)}
 .diff-item:hover .diff-icon{opacity:.6;right:1rem}
 /* FAQ */

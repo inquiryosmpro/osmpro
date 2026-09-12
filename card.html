@@ -11,15 +11,15 @@
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   :root {
-    --navy: #0d1f3c;
-    --blue: #1a4fa0;
-    --blue-mid: #2563c8;
-    --green: #3ab044;
-    --green-light: #4cca55;
-    --white: #ffffff;
-    --off: #f4f7fc;
-    --grey: #8898b0;
-    --border: rgba(255,255,255,0.12);
+    --navy: #eef8fd;
+    --blue: #0e7bc2;
+    --blue-mid: #2196d6;
+    --green: #1f8fd6;
+    --green-light: #7ec8f0;
+    --white: #0f2c47;
+    --off: #f7fbfd;
+    --grey: #5c7080;
+    --border: rgba(15,44,71,0.12);
   }
 
   html, body {
@@ -40,11 +40,11 @@
 
   /* ─── HERO ─── */
   .hero {
-    background: linear-gradient(160deg, #0a1628 0%, #0d2050 55%, #0a2a10 100%);
+    background: linear-gradient(160deg, #0a2540 0%, #0d3f7a 55%, #145a96 100%);
     padding: 36px 24px 32px;
     text-align: center;
     position: relative;
-    border-bottom: 2px solid var(--green);
+    border-bottom: 2px solid var(--blue-mid);
   }
   .hero::before {
     content: '';
@@ -61,7 +61,7 @@
     background: white;
     border-radius: 22px;
     padding: 10px;
-    box-shadow: 0 8px 32px rgba(0,0,0,0.5), 0 0 0 2px rgba(58,176,68,0.3);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.5), 0 0 0 2px rgba(33,150,214,0.35);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -109,11 +109,11 @@
     color: rgba(255,255,255,0.85);
     letter-spacing: 0.3px;
   }
-  .badge.green { background: rgba(58,176,68,0.18); border-color: rgba(58,176,68,0.4); color: #7ee885; }
+  .badge.green { background: rgba(33,150,214,0.2); border-color: rgba(33,150,214,0.45); color: #a8ddf5; }
 
   /* ─── PROMO BANNER ─── */
   .promo {
-    background: linear-gradient(90deg, var(--green) 0%, #2a9e34 100%);
+    background: linear-gradient(90deg, var(--green) 0%, #2196d6 100%);
     text-align: center;
     padding: 11px 20px;
     font-size: 13px;
@@ -155,12 +155,12 @@
     padding: 17px;
     letter-spacing: 0.3px;
   }
-  .btn-email { background: rgba(255,255,255,0.08); color: white; border: 1px solid rgba(255,255,255,0.18); }
-  .btn-web { background: rgba(58,176,68,0.15); color: #7ee885; border: 1px solid rgba(58,176,68,0.3); }
+  .btn-email { background: rgba(15,44,71,0.05); color: var(--white); border: 1px solid rgba(15,44,71,0.15); }
+  .btn-web { background: rgba(31,143,214,0.12); color: #0e7bc2; border: 1px solid rgba(31,143,214,0.35); }
   .btn-save {
-    background: rgba(255,255,255,0.05);
-    color: rgba(255,255,255,0.7);
-    border: 1px solid rgba(255,255,255,0.12);
+    background: rgba(15,44,71,0.04);
+    color: rgba(15,44,71,0.7);
+    border: 1px solid rgba(15,44,71,0.15);
     font-size: 12px;
     padding: 13px;
     grid-column: 1 / -1;
@@ -176,7 +176,7 @@
     font-weight: 700;
     letter-spacing: 3px;
     text-transform: uppercase;
-    color: var(--green-light);
+    color: var(--blue);
     margin-bottom: 14px;
     display: flex;
     align-items: center;
@@ -186,7 +186,7 @@
     content: '';
     flex: 1;
     height: 1px;
-    background: rgba(255,255,255,0.1);
+    background: rgba(15,44,71,0.15);
   }
 
   /* ─── SERVICES ─── */
@@ -196,8 +196,8 @@
     gap: 8px;
   }
   .service-chip {
-    background: rgba(255,255,255,0.06);
-    border: 1px solid rgba(255,255,255,0.1);
+    background: rgba(15,44,71,0.04);
+    border: 1px solid rgba(15,44,71,0.12);
     border-radius: 12px;
     padding: 13px 12px;
     display: flex;
@@ -205,7 +205,7 @@
     gap: 9px;
     font-size: 13px;
     font-weight: 500;
-    color: rgba(255,255,255,0.9);
+    color: rgba(15,44,71,0.8);
     transition: background 0.2s;
   }
   .service-chip:active { background: rgba(37,99,200,0.2); }
@@ -218,13 +218,13 @@
     gap: 7px;
   }
   .area-tag {
-    background: rgba(37,99,200,0.2);
-    border: 1px solid rgba(37,99,200,0.4);
+    background: rgba(31,143,214,0.12);
+    border: 1px solid rgba(31,143,214,0.35);
     border-radius: 20px;
     padding: 6px 13px;
     font-size: 12px;
     font-weight: 500;
-    color: #a8c8ff;
+    color: #0e7bc2;
   }
 
   /* ─── STATS ─── */
@@ -232,13 +232,13 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1px;
-    background: rgba(255,255,255,0.08);
+    background: rgba(15,44,71,0.08);
     border-radius: 16px;
     overflow: hidden;
-    border: 1px solid rgba(255,255,255,0.1);
+    border: 1px solid rgba(15,44,71,0.12);
   }
   .stat {
-    background: rgba(255,255,255,0.04);
+    background: #ffffff;
     padding: 16px 8px;
     text-align: center;
   }
@@ -248,7 +248,7 @@
     font-weight: 800;
     color: var(--white);
     line-height: 1;
-    background: linear-gradient(90deg, #fff 0%, #7ee885 100%);
+    background: linear-gradient(90deg, #0e7bc2 0%, #2196d6 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -267,8 +267,8 @@
     padding: 28px 20px;
   }
   .qr-card {
-    background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(255,255,255,0.1);
+    background: #ffffff;
+    border: 1px solid rgba(15,44,71,0.1);
     border-radius: 20px;
     padding: 24px;
     text-align: center;
@@ -296,14 +296,14 @@
   }
   .qr-url {
     font-size: 11px;
-    color: var(--green-light);
+    color: var(--blue);
     font-weight: 600;
     letter-spacing: 0.5px;
   }
   .share-tip {
     margin-top: 12px;
     font-size: 11px;
-    color: rgba(255,255,255,0.45);
+    color: rgba(15,44,71,0.5);
     line-height: 1.5;
   }
 
@@ -334,10 +334,10 @@
     text-align: center;
     padding: 0 20px;
     font-size: 11px;
-    color: rgba(255,255,255,0.3);
+    color: rgba(15,44,71,0.45);
     line-height: 1.8;
   }
-  .footer a { color: rgba(255,255,255,0.4); text-decoration: none; }
+  .footer a { color: rgba(15,44,71,0.55); text-decoration: none; }
 </style>
 </head>
 <body>

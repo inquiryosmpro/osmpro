@@ -19,15 +19,15 @@
 
 <style>
   :root {
-    --green: #2D6A2D;
-    --green-light: #4A9E4A;
-    --green-bright: #6fd86f;
-    --gold: #C8922A;
-    --gold-light: #F5C96A;
-    --dark: #0e1410;
-    --white: #FFFFFF;
-    --offwhite: #F7F9F5;
-    --gray: #6B7A6B;
+    --green: #1f8fd6;
+    --green-light: #52b8ea;
+    --green-bright: #2196d6;
+    --gold: #0c5f96;
+    --gold-light: #6cc5ef;
+    --dark: #eef8fd;
+    --white: #0f2c47;
+    --offwhite: #f7fbfd;
+    --gray: #5c7080;
   }
 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -50,15 +50,15 @@
     content: '';
     position: absolute; inset: 0;
     background:
-      radial-gradient(ellipse at 15% 20%, rgba(45,106,45,0.35) 0%, transparent 55%),
-      radial-gradient(ellipse at 85% 80%, rgba(200,146,42,0.15) 0%, transparent 50%),
-      radial-gradient(ellipse at 50% 50%, rgba(74,158,74,0.08) 0%, transparent 70%);
+      radial-gradient(ellipse at 15% 20%, rgba(31,143,214,0.12) 0%, transparent 55%),
+      radial-gradient(ellipse at 85% 80%, rgba(12,95,150,0.08) 0%, transparent 50%),
+      radial-gradient(ellipse at 50% 50%, rgba(82,184,234,0.06) 0%, transparent 70%);
   }
   .bg-grid {
     position: absolute; inset: 0;
     background-image:
-      linear-gradient(rgba(74,158,74,0.04) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(74,158,74,0.04) 1px, transparent 1px);
+      linear-gradient(rgba(15,44,71,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(15,44,71,0.03) 1px, transparent 1px);
     background-size: 60px 60px;
   }
 
@@ -91,9 +91,9 @@
   }
   .eyebrow {
     display: inline-block;
-    background: rgba(200,146,42,0.15);
-    border: 1px solid rgba(200,146,42,0.4);
-    color: var(--gold-light);
+    background: rgba(12,95,150,0.1);
+    border: 1px solid rgba(12,95,150,0.35);
+    color: var(--gold);
     font-size: 0.72rem;
     font-weight: 700;
     letter-spacing: 3px;
@@ -114,7 +114,7 @@
     color: var(--green-bright);
   }
   .header p {
-    color: rgba(255,255,255,0.6);
+    color: rgba(15,44,71,0.65);
     font-size: 1rem;
     margin-top: 12px;
     font-weight: 300;
@@ -134,9 +134,9 @@
     animation: fadeDown 0.6s 0.1s ease both;
   }
   .pill {
-    background: rgba(255,255,255,0.06);
-    border: 1px solid rgba(255,255,255,0.1);
-    color: rgba(255,255,255,0.75);
+    background: rgba(15,44,71,0.05);
+    border: 1px solid rgba(15,44,71,0.12);
+    color: rgba(15,44,71,0.75);
     font-size: 0.75rem;
     font-weight: 600;
     padding: 6px 14px;
@@ -148,8 +148,8 @@
   .form-card {
     width: 100%;
     max-width: 540px;
-    background: rgba(255,255,255,0.04);
-    border: 1px solid rgba(255,255,255,0.1);
+    background: #ffffff;
+    border: 1px solid rgba(15,44,71,0.1);
     border-radius: 16px;
     padding: 36px 32px;
     backdrop-filter: blur(12px);
@@ -169,7 +169,7 @@
     margin-bottom: 16px;
     margin-top: 28px;
     padding-top: 28px;
-    border-top: 1px solid rgba(255,255,255,0.07);
+    border-top: 1px solid rgba(15,44,71,0.1);
   }
   .form-section-title:first-child { margin-top: 0; padding-top: 0; border-top: none; }
 
@@ -193,12 +193,12 @@
     font-weight: 700;
     letter-spacing: 1px;
     text-transform: uppercase;
-    color: rgba(255,255,255,0.55);
+    color: rgba(15,44,71,0.6);
   }
 
   input, select, textarea {
-    background: rgba(255,255,255,0.06);
-    border: 1.5px solid rgba(255,255,255,0.12);
+    background: rgba(15,44,71,0.03);
+    border: 1.5px solid rgba(15,44,71,0.15);
     border-radius: 8px;
     padding: 12px 14px;
     font-size: 0.95rem;
@@ -208,13 +208,13 @@
     transition: border-color 0.2s, background 0.2s;
     width: 100%;
   }
-  input::placeholder, textarea::placeholder { color: rgba(255,255,255,0.25); }
+  input::placeholder, textarea::placeholder { color: rgba(15,44,71,0.3); }
   input:focus, select:focus, textarea:focus {
     border-color: var(--green-light);
-    background: rgba(74,158,74,0.08);
+    background: rgba(31,143,214,0.06);
   }
   select { cursor: pointer; }
-  select option { background: #1a2a1a; color: var(--white); }
+  select option { background: #ffffff; color: var(--white); }
   textarea { min-height: 100px; resize: vertical; }
 
   /* SERVICES CHECKBOXES */
@@ -230,21 +230,21 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    background: rgba(255,255,255,0.04);
-    border: 1.5px solid rgba(255,255,255,0.1);
+    background: rgba(15,44,71,0.03);
+    border: 1.5px solid rgba(15,44,71,0.15);
     border-radius: 8px;
     padding: 10px 12px;
     cursor: pointer;
     font-size: 0.85rem;
     font-weight: 500;
-    color: rgba(255,255,255,0.7);
+    color: rgba(15,44,71,0.7);
     transition: all 0.2s;
     text-transform: none;
     letter-spacing: 0;
   }
   .check-label:hover {
-    border-color: rgba(74,158,74,0.4);
-    background: rgba(74,158,74,0.08);
+    border-color: rgba(31,143,214,0.5);
+    background: rgba(31,143,214,0.08);
     color: var(--white);
   }
   .check-label input[type="checkbox"] {
@@ -257,7 +257,7 @@
   }
   .check-label.checked {
     border-color: var(--green-light);
-    background: rgba(74,158,74,0.15);
+    background: rgba(31,143,214,0.15);
     color: var(--white);
   }
 
@@ -265,7 +265,7 @@
   .submit-btn {
     width: 100%;
     background: linear-gradient(135deg, var(--green), var(--green-light));
-    color: var(--white);
+    color: #ffffff;
     border: none;
     padding: 16px;
     border-radius: 10px;
@@ -293,7 +293,7 @@
 
   .form-note {
     font-size: 0.75rem;
-    color: rgba(255,255,255,0.35);
+    color: rgba(15,44,71,0.4);
     text-align: center;
     margin-top: 14px;
     line-height: 1.5;
@@ -322,14 +322,14 @@
     letter-spacing: 1px;
   }
   .success-screen p {
-    color: rgba(255,255,255,0.6);
+    color: rgba(15,44,71,0.65);
     font-size: 0.95rem;
     line-height: 1.6;
   }
   .success-screen .reply-time {
     display: inline-block;
-    background: rgba(111,216,111,0.15);
-    border: 1px solid rgba(111,216,111,0.3);
+    background: rgba(33,150,214,0.15);
+    border: 1px solid rgba(33,150,214,0.3);
     color: var(--green-bright);
     font-size: 0.8rem;
     font-weight: 700;
@@ -346,7 +346,7 @@
     animation: fadeUp 0.6s 0.4s ease both;
   }
   .page-footer a {
-    color: rgba(255,255,255,0.4);
+    color: rgba(15,44,71,0.5);
     font-size: 0.8rem;
     text-decoration: none;
     transition: color 0.2s;
@@ -360,7 +360,7 @@
     margin-top: 12px;
   }
   .contact-links a {
-    color: rgba(255,255,255,0.5);
+    color: rgba(15,44,71,0.6);
     font-size: 0.82rem;
     text-decoration: none;
     display: flex;
